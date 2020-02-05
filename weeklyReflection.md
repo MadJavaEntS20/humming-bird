@@ -20,4 +20,13 @@ will be stored in the database. Given time constraints most data that would be c
  
 ### Week 3
 
-2/4/2020
+2/4/2020 - 8 hours
+
+Tasks Completed:
+
+   * completed week 3 activities and exercises
+   
+   Other Thoughts:
+   
+   I need to do some work on indie project because checkpoint one is due next week. 
+    
