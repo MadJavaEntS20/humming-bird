@@ -29,4 +29,17 @@ Tasks Completed:
    Other Thoughts:
    
    I need to do some work on indie project because checkpoint one is due next week. 
+### Week 4
+
+Looking into realistic implementation of my app. OpenLayers for the map seems the best route.
+It's open source and what I need it for is not very complex. Adding points to map
+is main concern, hoping to have a table with lat/lon and add points like [this](https://gis.stackexchange.com/questions/314140/openlayers-5-add-multiple-markers) 
+
+I didn't really like bootstrap in advanced css, so looking for a different framework, or maybe from scratch
+
+For user flow, it's user views maps and if logged in, user also enters sighting that will be added to the db which the map reads from
+Should there be some form of moderation to ensure hummingbirds aren't "seen" in Antarctica or somewhere dumb
+
+Found a cool api for geocoding, so if a use enters an address, it will be converted to lat/lon for the database
+
     

@@ -12,20 +12,21 @@ This repository will hold my individual project for the semester.
 * Security/Authentication
   * Tomcat's JDBC Realm Authentication
   * Admin role: create/read/update/delete (crud) of all data
-  * User role: create ...
-  * All: anyone can view trail information (no login)
+  * User role: create observations of hummingbirds
+  * All: anyone can view migration map (no login)
 * Database
   * MySQL
   * Store users and roles
-  * Store all data for ...
+  * Store all data for observations 
+* Web Mapping API
+    * OpenLayers displaying a map with points
+    * OpenCageData for geocoding
 * ORM Framework
   * Hibernate 5
 * Dependency Management
   * Maven
-* Web Services consumed using Java
-  * 
 * CSS 
-  * 
+  * PureCSS.io
 * Data Validation
   * Bootstrap Validator for front end
   * Explore Hibernate's validation
@@ -36,9 +37,8 @@ This repository will hold my individual project for the semester.
 * Independent Research Topic/s
   * CI tools in AWS
   * Materialize
-  * ESRI Maps API
   * Hibernate Validation
-  * Hibernat Search
+  * Hibernate Search
 * Project Lombok to eliminate boilerplate code like getters/setters/equals
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
