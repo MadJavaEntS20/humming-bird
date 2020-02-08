@@ -2,24 +2,24 @@
 
 ### Home Page aka The Map
 
-![Home Page](wireframes/1-Reports.png)
+![Home Page](wireframes/Home.png)
 
 ### Add New Sighting Page
 
-![Add New Report](wireframes/2-NewReport.png)
+![Add New Report](wireframes/Enter_Sighting.png)
 
 ### View & Update Your Sightings
 
-![View Trail Info](wireframes/4-Trail.png)
+![View Trail Info](wireframes/My_Account.png)
 
 ### Dialog for Sign In
 
-![Sign In Dialog](wireframes/6-Sign-In.png)
+![Sign In Dialog](wireframes/Log_In.png)
 
 ### Dialog for Sign Up
 
-![Sign up Dialog](wireframes/7-SignUp.png)
+![Sign up Dialog](wireframes/Register.png)
 
 ### About Page
 
-![About Page](wireframes/8-About.png)
+![About Page](wireframes/About.png)

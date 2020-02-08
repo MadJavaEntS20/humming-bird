@@ -1,10 +1,14 @@
-# Katya Mullendore Individual Project
+# Katya Mullendore Individual Project: Hummingbird Tracker
 
-This repository will hold my individual project for the semester.
 
 ### Problem Statement
 
-...
+This application aims to give users an opportunity to be citizen scientists and
+become active participants in 
+monitoring the health of the environment.
+ 
+With each entry added, a map of  
+collective sightings will be created to illustrate the journey of the hummingbird. 
 
 
 ### Project Technologies/Techniques 
