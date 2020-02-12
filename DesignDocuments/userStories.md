@@ -21,6 +21,10 @@ As a registered user, I want to add a sighting taking into account time, locatio
 
 As a registered user, I want to add or remove a sighting if an error was made.
 
+### Moderate Sightings
+
+As an admin user, I wasnt to moderate sightings to ensure no improper sightings are added.
+
 ### About
 
 As a user I want to find out more information about this site so that I can make donations or contact the admin.
