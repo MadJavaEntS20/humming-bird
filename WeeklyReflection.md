@@ -44,4 +44,8 @@ Found a cool api for geocoding, so if a user enters an address, it will be conve
 
 Could be useful to implement crowdsourced map on OL: [link](https://gis.stackexchange.com/questions/32159/using-openlayers-to-collect-data-by-crowdsourcing)
 
+### Week 5 
+
+Discussion about Check Point 1: Make reporting bad data crowdsourced as well instead of an admin full-time job (also validate location first to confirm it exists within some sort of bounding box), in user input default to current location and current time
+
     
