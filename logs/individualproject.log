@@ -1,0 +1,28 @@
+[DEBUG] 2020-02-12 20:20:55.399 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:20:55.593 [main] UserDao - Searching for user with username = emullendore
+[DEBUG] 2020-02-12 20:20:55.966 [main] UserDao - Searching for user with username = ihecker
+[DEBUG] 2020-02-12 20:25:30.476 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:25:30.618 [main] UserDao - Searching for user with user_name = emullendore
+[DEBUG] 2020-02-12 20:25:30.801 [main] UserDao - Searching for user with user_name = ihecker
+[DEBUG] 2020-02-12 20:26:12.011 [main] UserDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-12 20:26:24.993 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:26:25.256 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:26:25.446 [main] UserDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-12 20:27:17.420 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:27:29.624 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:27:29.858 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:27:30.278 [main] UserDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-12 20:27:47.847 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:27:48.035 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:27:48.438 [main] UserDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-12 20:34:08.821 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-12 20:34:40.184 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:34:40.472 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:34:40.651 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-12 20:38:58.555 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:39:14.629 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:39:14.917 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:39:15.099 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-12 20:42:02.663 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-12 20:42:02.903 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-12 20:42:03.146 [main] UserDao - Searching for user with userName = ihec
