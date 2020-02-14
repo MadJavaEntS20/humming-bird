@@ -26,3 +26,18 @@
 [DEBUG] 2020-02-12 20:42:02.663 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
 [DEBUG] 2020-02-12 20:42:02.903 [main] UserDao - Searching for user with userName = emullendore
 [DEBUG] 2020-02-12 20:42:03.146 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-13 18:39:27.486 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-13 18:39:27.757 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-13 18:39:28.292 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-13 18:57:59.130 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-13 18:57:59.519 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-13 18:57:59.884 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-13 19:13:33.517 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-13 19:13:33.749 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-13 19:13:34.124 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-13 19:14:36.754 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-13 19:14:37.002 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-13 19:14:37.314 [main] UserDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-13 19:14:56.571 [main] UserDao - The list of users [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-13 19:14:57.311 [main] UserDao - Searching for user with userName = emullendore
+[DEBUG] 2020-02-13 19:14:57.707 [main] UserDao - Searching for user with userName = ihec

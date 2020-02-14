@@ -51,6 +51,16 @@ class UserDaoTest {
         // it may make sense to use .equals()
     }
 
+    @Test
+    void updateUserSuccess() {
+        String newUserName = "kmullendore";
+        User userToUpdate = dao.getById(1);
+        userToUpdate.setUserName(newUserName);
+        dao.saveOrUpdate(userToUpdate);
+        User retrievedUser = dao.getById(1);
+        assertEquals(newUserName, retrievedUser.getUserName());
+    }
+
     /**
      * Verify successful delete of user
      */
@@ -87,4 +97,5 @@ class UserDaoTest {
         List<User> users = dao.getByPropertyLike("userName", "ihec");
         assertEquals(1, users.size());
     }
+
 }
