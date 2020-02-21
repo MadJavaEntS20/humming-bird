@@ -48,4 +48,9 @@ Could be useful to implement crowdsourced map on OL: [link](https://gis.stackexc
 
 Discussion about Check Point 1: Make reporting bad data crowdsourced as well instead of an admin full-time job (also validate location first to confirm it exists within some sort of bounding box), in user input default to current location and current time
 There's a mysql data type of Point I can use, [method for extracting](https://dev.mysql.com/doc/refman/8.0/en/gis-point-property-functions.html#function_st-x)
+
+Work with one-to-many relationships, going to one USER has many SIGHTINGS
+Presentation this week on annotations, setting constraints for lat and long to fall
+within a certain range and output that message to the user would be a good use-case
+
     
