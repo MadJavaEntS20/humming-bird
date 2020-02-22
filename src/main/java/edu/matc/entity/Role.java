@@ -4,9 +4,7 @@ import javax.persistence.*;
 
 
 /**
- * A class to represent a user.
- *
- * @author pwaite
+ * The type Role.
  */
 @Entity(name = "Roles")
 @Table(name = "user_roles")
@@ -39,14 +37,29 @@ public class Role {
         return userName;
     }
 
+    /**
+     * Sets user name.
+     *
+     * @param userName the user name
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }
 
+    /**
+     * Gets user role.
+     *
+     * @return the user role
+     */
     public String getUserRole() {
         return userRole;
     }
 
+    /**
+     * Sets user role.
+     *
+     * @param userRole the user role
+     */
     public void setUserRole(String userRole) {
         this.userRole = userRole;
     }
@@ -68,24 +81,6 @@ public class Role {
     public void setId(int id) {
         this.id = id;
     }
-
-//    /**
-//     * Gets user.
-//     *
-//     * @return the user
-//     */
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    /**
-//     * Sets user.
-//     *
-//     * @param user the user
-//     */
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
 
     @Override
     public String toString() {

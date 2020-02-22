@@ -1,7 +1,6 @@
 package edu.matc.entity;
 
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -10,7 +9,7 @@ import java.util.Set;
 /**
  * A class to represent a user.
  *
- * @author pwaite
+ * @author emullendore
  */
 @Entity(name = "Users")
 @Table(name = "users")
@@ -29,6 +28,7 @@ public class User {
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<Sightings> sightings =  new HashSet<>();
+
     /**
      * Instantiates a new User.
      */
@@ -38,14 +38,13 @@ public class User {
     /**
      * Instantiates a new User.
      *
-     * @param userName the user name
-     * @param userPassword  the user password
+     * @param userName     the user name
+     * @param userPassword the user password
      */
     public User(String userName, String userPassword) {
         this.userName = userName;
         this.userPassword = userPassword;
     }
-
 
     /**
      * Gets user name.
@@ -102,19 +101,39 @@ public class User {
         this.id = id;
     }
 
+    /**
+     * Gets sightings.
+     *
+     * @return the sightings
+     */
     public Set<Sightings> getSightings() {
         return sightings;
     }
 
+    /**
+     * Sets sightings.
+     *
+     * @param sightings the sightings
+     */
     public void setSightings(Set<Sightings> sightings) {
         this.sightings = sightings;
     }
 
+    /**
+     * Add sightings.
+     *
+     * @param sighting the sighting
+     */
     public void addSightings(Sightings sighting) {
         sightings.add(sighting);
         sighting.setUser(this);
     }
 
+    /**
+     * Remove sightings.
+     *
+     * @param sighting the sighting
+     */
     public void removeSightings(Sightings sighting) {
         sightings.remove(sighting);
         sighting.setUser(null);

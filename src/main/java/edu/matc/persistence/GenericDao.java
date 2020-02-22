@@ -48,6 +48,11 @@ public class GenericDao<T> {
         return entity;
     }
 
+    /**
+     * Delete.
+     *
+     * @param entity the entity
+     */
     public void delete(T entity) {
         Session session = getSession();
         Transaction transaction = session.beginTransaction();
@@ -79,7 +84,8 @@ public class GenericDao<T> {
         id = (int)session.save(entity);
         transaction.commit();
         session.close();
-        return id;    }
+        return id;
+    }
 
     /**
      * Get user by property (exact match)

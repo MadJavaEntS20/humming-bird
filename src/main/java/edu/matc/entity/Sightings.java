@@ -3,13 +3,10 @@ package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.Instant;
 import java.util.Date;
 
 /**
- * A class to represent a user.
- *
- * @author pwaite
+ * The type Sightings.
  */
 @Entity(name = "Sightings")
 @Table(name = "sightings")
@@ -44,6 +41,16 @@ public class Sightings {
     public Sightings() {
     }
 
+    /**
+     * Instantiates a new Sightings.
+     *
+     * @param user      the user
+     * @param longitude the longitude
+     * @param latitude  the latitude
+     * @param species   the species
+     * @param dateTime  the date time
+     * @param approved  the approved
+     */
     public Sightings(User user, float longitude, float latitude, String species, Date dateTime, boolean approved) {
         this.user = user;
         this.longitude = longitude;
@@ -53,42 +60,92 @@ public class Sightings {
         this.approved = approved;
     }
 
+    /**
+     * Gets longitude.
+     *
+     * @return the longitude
+     */
     public float getLongitude() {
         return longitude;
     }
 
+    /**
+     * Sets longitude.
+     *
+     * @param longitude the longitude
+     */
     public void setLongitude(float longitude) {
         this.longitude = longitude;
     }
 
+    /**
+     * Gets latitude.
+     *
+     * @return the latitude
+     */
     public float getLatitude() {
         return latitude;
     }
 
+    /**
+     * Sets latitude.
+     *
+     * @param latitude the latitude
+     */
     public void setLatitude(float latitude) {
         this.latitude = latitude;
     }
 
+    /**
+     * Gets species.
+     *
+     * @return the species
+     */
     public String getSpecies() {
         return species;
     }
 
+    /**
+     * Sets species.
+     *
+     * @param species the species
+     */
     public void setSpecies(String species) {
         this.species = species;
     }
 
+    /**
+     * Gets date time.
+     *
+     * @return the date time
+     */
     public Date getDateTime() {
         return dateTime;
     }
 
+    /**
+     * Sets date time.
+     *
+     * @param dateTime the date time
+     */
     public void setDateTime(Date dateTime) {
         this.dateTime = dateTime;
     }
 
+    /**
+     * Gets approved.
+     *
+     * @return the approved
+     */
     public boolean getApproved() {
         return approved;
     }
 
+    /**
+     * Sets approved.
+     *
+     * @param approved the approved
+     */
     public void setApproved(boolean approved) {
         this.approved = approved;
     }
@@ -112,10 +169,20 @@ public class Sightings {
     }
 
 
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
     public void setUser(User user) {
         this.user = user;
     }

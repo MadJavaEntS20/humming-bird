@@ -314,3 +314,15 @@
 [DEBUG] 2020-02-20 21:51:29.178 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
 [DEBUG] 2020-02-20 21:51:29.750 [main] GenericDao - Searching for entity with species = ruby-throated
 [DEBUG] 2020-02-20 21:51:30.767 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 09:28:35.831 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 09:28:36.300 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 09:28:36.674 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 09:31:35.920 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 09:31:36.363 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 09:31:37.396 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 09:33:12.050 [main] GenericDao - The list of entities []
+[DEBUG] 2020-02-22 09:33:12.358 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 09:33:12.949 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 09:33:53.305 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 09:33:53.672 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 09:33:54.556 [main] GenericDao - Searching for user with species = ruby

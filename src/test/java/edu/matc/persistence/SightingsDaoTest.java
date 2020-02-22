@@ -1,18 +1,13 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Sightings;
-import edu.matc.entity.Sightings;
 import edu.matc.entity.User;
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.sql.Timestamp;
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Instant;
-import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -64,7 +59,7 @@ class SightingsDaoTest {
         Date date = new Date();
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date javaDate = sdf.parse("06/10/2013 18:29:09");
+        Date javaDate = sdf.parse("06/10/2019 18:29:09");
 
         Sightings newSighting = new Sightings(newUser, .30f, -12.03f, "ruby-throated", new java.sql.Timestamp (javaDate.getTime()), true );
         int id = genericDao.insert(newSighting);
