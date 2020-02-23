@@ -15,8 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SightingsDaoTest {
 
-//    SightingsDao dao;
-    GenericDao genericDao;
+    GenericDao<Sightings> genericDao;
+    GenericDao<User> genericDaoUser;
 
     /**
      * Run set up tasks before each test:
@@ -25,7 +25,8 @@ class SightingsDaoTest {
      */
     @BeforeEach
     void setUp() {
-        genericDao = new GenericDao(Sightings.class);
+        genericDao = new GenericDao<>(Sightings.class);
+        genericDaoUser = new GenericDao<>(User.class);
 
         Database database = edu.matc.test.util.Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -36,7 +37,7 @@ class SightingsDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<Sightings> users = (List<Sightings>)genericDao.getAll();
+        List<Sightings> users = genericDao.getAll();
         assertEquals(2, users.size());
     }
 
@@ -73,8 +74,13 @@ class SightingsDaoTest {
      */
     @Test
     void deleteSuccess() {
-        genericDao.delete(genericDao.getById(1));
+        Sightings deletedSighting = genericDao.getById(1);
+        int userId = deletedSighting.getUser().getId();
+        User deletedSightingUser = genericDaoUser.getById(userId);
+        genericDao.delete(deletedSighting);
         assertNull(genericDao.getById(1));
+        assertNotNull(deletedSightingUser);
+
     }
 
 
@@ -102,8 +108,8 @@ class SightingsDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Sightings> users = genericDao.getByPropertyLike("species", "ruby");
-        assertEquals(2, users.size());
+        List<Sightings> sighting = genericDao.getByPropertyLike("species", "ruby");
+        assertEquals(2, sighting.size());
     }
 
 }

@@ -46,6 +46,8 @@ Could be useful to implement crowdsourced map on OL: [link](https://gis.stackexc
 
 ### Week 5 
 
+2/18/2020 - 10 hours
+
 Discussion about Check Point 1: Make reporting bad data crowdsourced as well instead of an admin full-time job (also validate location first to confirm it exists within some sort of bounding box), in user input default to current location and current time
 There's a mysql data type of Point I can use, [method for extracting](https://dev.mysql.com/doc/refman/8.0/en/gis-point-property-functions.html#function_st-x)
 

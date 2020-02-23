@@ -7,13 +7,16 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class UserDaoTest {
 
     GenericDao genericDao;
+    GenericDao genericDaoSighting;
 
     /**
      * Run set up tasks before each test:
@@ -23,6 +26,7 @@ class UserDaoTest {
     @BeforeEach
     void setUp() {
         genericDao = new GenericDao(User.class);
+        genericDaoSighting = new GenericDao(Sightings.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -84,8 +88,17 @@ class UserDaoTest {
      */
     @Test
     void deleteSuccess() {
+        User userToDelete = (User)genericDao.getById(1);
+        Set<Sightings> userToDeleteSightings = userToDelete.getSightings();
+        List<Integer> idOfSightings = new ArrayList<>();
+        for (Sightings s: userToDeleteSightings) {
+            idOfSightings.add(s.getId());
+        }
         genericDao.delete(genericDao.getById(1));
-        assertNull((genericDao.getById(1)));
+        assertNull(genericDao.getById(1));
+        for (Integer id : idOfSightings) {
+            assertNull(genericDaoSighting.getById(id));
+        }
     }
 
     @Test

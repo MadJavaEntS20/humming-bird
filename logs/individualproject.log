@@ -326,3 +326,82 @@
 [DEBUG] 2020-02-22 09:33:53.305 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
 [DEBUG] 2020-02-22 09:33:53.672 [main] GenericDao - Searching for entity with species = ruby-throated
 [DEBUG] 2020-02-22 09:33:54.556 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 11:47:20.279 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 11:47:20.713 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 11:47:21.555 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 11:47:23.191 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 11:47:23.593 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 11:47:23.888 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 11:47:24.234 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 11:51:11.099 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 11:51:11.601 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 11:51:12.741 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 11:51:15.419 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 11:51:15.733 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 11:51:16.190 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 11:51:16.469 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 12:01:40.015 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 12:01:40.378 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 12:01:41.176 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 12:01:42.906 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 12:01:43.215 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 12:01:43.533 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 12:01:43.904 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 12:15:25.189 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 12:15:25.693 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 12:15:26.476 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 12:15:28.407 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 12:15:28.798 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 12:15:29.103 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 12:15:29.480 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 12:19:03.154 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 12:19:03.724 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 12:19:04.842 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 12:19:07.977 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 12:19:08.559 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 12:19:08.935 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 12:19:09.553 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 16:02:03.027 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 16:02:03.550 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 16:02:04.929 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 16:11:50.669 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 16:11:51.384 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 16:11:52.283 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 16:16:20.703 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 16:16:20.983 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 16:16:22.019 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 16:17:09.839 [main] GenericDao - The list of entities [Sightings{longitude=43.07305, latitude=-89.40123, species='ruby-throated', dateTime=2020-02-16 10:49:10.0, approved=true, user=User{userName='emullendore'userPassword='password1}, id=1}, Sightings{longitude=43.06305, latitude=-89.50123, species='ruby-throated', dateTime=2020-02-02 10:50:51.0, approved=false, user=User{userName='ihecker'userPassword='password2}, id=2}]
+[DEBUG] 2020-02-22 16:17:10.247 [main] GenericDao - Searching for entity with species = ruby-throated
+[DEBUG] 2020-02-22 16:17:11.362 [main] GenericDao - Searching for user with species = ruby
+[DEBUG] 2020-02-22 16:26:16.508 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 16:26:17.516 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 16:26:17.911 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 16:26:18.524 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 16:36:32.862 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 16:36:34.043 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 16:36:34.464 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 16:36:35.071 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 16:40:23.674 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 16:40:24.543 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 16:40:24.926 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 16:40:25.411 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 16:51:14.471 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 16:51:15.515 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 16:51:15.896 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 16:51:16.290 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 16:57:41.352 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 16:57:42.200 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 16:57:42.667 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 16:57:43.217 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 16:59:23.787 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 16:59:24.804 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 16:59:25.551 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 16:59:26.120 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-22 17:34:58.189 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-22 17:34:59.146 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-22 17:34:59.519 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-22 17:34:59.880 [main] GenericDao - Searching for user with userName = ihec
+[DEBUG] 2020-02-23 10:20:26.180 [main] GenericDao - Searching for user with userName = ihecker
+[DEBUG] 2020-02-23 10:20:27.668 [main] GenericDao - The list of entities [User{userName='emullendore'userPassword='password1}, User{userName='ihecker'userPassword='password2}]
+[DEBUG] 2020-02-23 10:20:28.013 [main] GenericDao - Searching for entity with userName = emullendore
+[DEBUG] 2020-02-23 10:20:28.565 [main] GenericDao - Searching for user with userName = ihec
