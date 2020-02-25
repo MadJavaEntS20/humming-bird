@@ -13,7 +13,7 @@ import java.io.IOException;
 
 /**
  * A simple servlet to welcome the user.
- * @author pwaite
+ * @author emullendore
  */
 
 @WebServlet(
@@ -21,15 +21,16 @@ import java.io.IOException;
         urlPatterns = {"/searchUser"}
 )
 
-public class SearchUser extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        GenericDao userDao = new GenericDao(User.class);
-        req.setAttribute("users", userDao.getAll());
-        String lastNameParam = req.getParameter("lastName");
-        req.setAttribute("users", userDao.getByPropertyLike("userName", lastNameParam));
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
-        dispatcher.forward(req, resp);
+    public class SearchUser extends HttpServlet {
+        @Override
+        protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+            GenericDao dao = new GenericDao(User.class);
+            if (req.getParameter("submit").equals("search")) {
+                req.setAttribute("users", dao.getByPropertyLike("userName", req.getParameter("searchTerm")));
+            } else {
+                req.setAttribute("users", dao.getAll());
+            }
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/results.jsp");
+            dispatcher.forward(req, resp);
+        }
     }
-}

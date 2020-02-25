@@ -102,6 +102,11 @@
               <artifactId>junit-platform-surefire-provider</artifactId>
               <version>${junit-platform-runner-version}</version>
             </dependency>
+            <dependency>
+              <groupId>jstl</groupId>
+              <artifactId>jstl</artifactId>
+              <version>1.2</version>
+            </dependency>
           </dependencies>
         </plugin>
       </plugins>

@@ -27,14 +27,14 @@ CREATE TABLE `sightings` (
   `longitude` float(10,6) NOT NULL,
   `latitude` float(10,6) NOT NULL,
   `species` varchar(50) NOT NULL,
-  `date_time` datetime NOT NULL,
+  `date_time` timestamp NOT NULL,
   `approved` tinyint(1) NOT NULL DEFAULT '1',
   `user_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `sightings_id_uindex` (`id`),
   KEY `sightings_users_id_fk` (`user_id`),
   CONSTRAINT `sightings_users_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,8 +43,7 @@ CREATE TABLE `sightings` (
 
 LOCK TABLES `sightings` WRITE;
 /*!40000 ALTER TABLE `sightings` DISABLE KEYS */;
-INSERT INTO `sightings` VALUES (1,43.073051,-89.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(2,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);
-
+INSERT INTO `sightings` VALUES (1,43.073051,-89.401230,'ruby-throated','2020-02-16 16:49:10',1,1),(2,42.073051,-89.501228,'ruby-throated','2020-02-16 16:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 16:50:51',0,2);
 /*!40000 ALTER TABLE `sightings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +84,7 @@ CREATE TABLE `users` (
   `user_name` varchar(20) NOT NULL,
   `user_password` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=166 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,8 +93,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'emullendore','password1'),(2,'ihecker','password2');
-
+INSERT INTO `users` VALUES (1,'emullendore','password1'),(2,'ihecker','password2'),(165,'gmullendore','password3');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -108,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-20 17:19:37
+-- Dump completed on 2020-02-23 18:00:23

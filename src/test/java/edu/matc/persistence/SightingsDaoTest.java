@@ -38,7 +38,7 @@ class SightingsDaoTest {
     @Test
     void getAllSuccess() {
         List<Sightings> users = genericDao.getAll();
-        assertEquals(2, users.size());
+        assertEquals(3, users.size());
     }
 
 
@@ -99,7 +99,7 @@ class SightingsDaoTest {
     @Test
     void getByPropertyEqualSuccess() {
         List<Sightings> sightings = genericDao.getByPropertyEqual("species", "ruby-throated");
-        assertEquals(2, sightings.size());
+        assertEquals(3, sightings.size());
         assertEquals(1, sightings.get(0).getId());
     }
 
@@ -109,7 +109,7 @@ class SightingsDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<Sightings> sighting = genericDao.getByPropertyLike("species", "ruby");
-        assertEquals(2, sighting.size());
+        assertEquals(3, sighting.size());
     }
 
 }
