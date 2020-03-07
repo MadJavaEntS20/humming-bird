@@ -4,13 +4,14 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * The type Sightings.
  */
-@Entity(name = "Sightings")
+@Entity(name = "Sighting")
 @Table(name = "sightings")
-public class Sightings {
+public class Sighting {
 
     @Column(name = "longitude")
     private float longitude;
@@ -22,7 +23,7 @@ public class Sightings {
     private String species;
 
     @Column(name = "date_time")
-    private Date dateTime;
+    private Date dateTime; // localDate data type?
 
     @Column(name = "approved")
     private boolean approved;
@@ -38,7 +39,7 @@ public class Sightings {
     /**
      * Instantiates a new User.
      */
-    public Sightings() {
+    public Sighting() {
     }
 
     /**
@@ -51,7 +52,7 @@ public class Sightings {
      * @param dateTime  the date time
      * @param approved  the approved
      */
-    public Sightings(User user, float longitude, float latitude, String species, Date dateTime, boolean approved) {
+    public Sighting(User user, float longitude, float latitude, String species, Date dateTime, boolean approved) {
         this.user = user;
         this.longitude = longitude;
         this.latitude = latitude;
@@ -190,15 +191,14 @@ public class Sightings {
 
     @Override
     public String toString() {
-        return "Sightings{" +
-                "longitude=" + longitude +
-                ", latitude=" + latitude +
-                ", species='" + species + '\'' +
-                ", dateTime=" + dateTime +
-                ", approved=" + approved +
-                ", user=" + user +
-                ", id=" + id +
-                '}';
+        return "{" +
+                "longitude:" + longitude +
+                ", latitude:" + latitude +
+                ", species:'" + species + "'" +
+                ", dateTime:'" + dateTime + "'" +
+                ", approved:" + approved +
+                ", id:" + id +
+                "}";
     }
 
     @Override
@@ -206,26 +206,17 @@ public class Sightings {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Sightings sightings = (Sightings) o;
-
-        if (Float.compare(sightings.longitude, longitude) != 0) return false;
-        if (Float.compare(sightings.latitude, latitude) != 0) return false;
-        if (approved != sightings.approved) return false;
-        if (id != sightings.id) return false;
-        if (species != null ? !species.equals(sightings.species) : sightings.species != null) return false;
-        if (dateTime != null ? !dateTime.equals(sightings.dateTime) : sightings.dateTime != null) return false;
-        return user != null ? user.equals(sightings.user) : sightings.user == null;
+        Sighting sighting = (Sighting) o;
+        return id == sighting.id &&
+                Objects.equals(longitude, sighting.longitude) &&
+                Objects.equals(latitude, sighting.latitude) &&
+                Objects.equals(species, sighting.species) &&
+                Objects.equals(approved, sighting.approved) &&
+                Objects.equals(dateTime, sighting.dateTime);
     }
 
     @Override
     public int hashCode() {
-        int result = (longitude != +0.0f ? Float.floatToIntBits(longitude) : 0);
-        result = 31 * result + (latitude != +0.0f ? Float.floatToIntBits(latitude) : 0);
-        result = 31 * result + (species != null ? species.hashCode() : 0);
-        result = 31 * result + (dateTime != null ? dateTime.hashCode() : 0);
-        result = 31 * result + (approved ? 1 : 0);
-        result = 31 * result + (user != null ? user.hashCode() : 0);
-        result = 31 * result + id;
-        return result;
+        return Objects.hash(longitude, latitude, species, approved, dateTime);
     }
 }

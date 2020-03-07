@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: ekmul
@@ -9,20 +10,23 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
-        <a class="navbar-brand" href="#">Fluttr</a>
+        <a class="navbar-brand" href="Sightings">Fluttr</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                    <a class="nav-link" href="Sightings">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.jsp">About</a>
-                </li>
+                <c:if test="{pageContext.request.isUserInRole('admin')}">
+                    <li class="nav-item">Admin</li>
+                </c:if>
+                <c:if test="{pageContext.request.isUserInRole('user')}">
+                    <li class="nav-item">User</li>
+                </c:if>
                 <li class="nav-item">
                     <a class="nav-link" href="register.jsp">Register</a>
                 </li>

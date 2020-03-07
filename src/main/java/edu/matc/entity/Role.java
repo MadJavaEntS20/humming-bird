@@ -1,6 +1,10 @@
 package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
+import java.util.Objects;
 
 
 /**
@@ -21,17 +25,48 @@ public class Role {
     @Column(name = "user_role")
     private String userRole;
 
+   @Column(name = "user_id")
+    private int userId;
+
+
+    @ManyToOne
+    @JoinColumn(name = "user_id",
+            insertable = false, updatable = false,
+            foreignKey = @ForeignKey(name = "user_roles_users_id_fk")
+    )
+    private User user;
+
+    /**
+     * Instantiates a new Role.
+     */
+    public Role() {
+    }
+
     /*
      * Instantiates a new Role.
      *
      * @param user the user
      * @param userRole  the user role
      */
-    public Role(String userName, String userRole) {
+    public Role(String userName, String userRole, int userId) {
         this.userName = userName;
         this.userRole = userRole;
+        this.userId = userId;
+    }
+    public User getUser() {
+        return user;
     }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 
     public String getUserName() {
         return userName;
@@ -82,13 +117,6 @@ public class Role {
         this.id = id;
     }
 
-    @Override
-    public String toString() {
-        return "Role{" +
-                "username=" + userName +
-                ", userRole='" + userRole + '\'' +
-                '}';
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -98,15 +126,22 @@ public class Role {
         Role role = (Role) o;
 
         if (id != role.id) return false;
-        if (userName != null ? !userName.equals(role.userName) : role.userName != null) return false;
-        return userRole != null ? userRole.equals(role.userRole) : role.userRole == null;
+        if (!Objects.equals(userName, role.userName)) return false;
+        if (!Objects.equals(userRole, role.userRole)) return false;
+        return Objects.equals(userId, role.userId);
     }
 
     @Override
     public int hashCode() {
-        int result = id;
-        result = 31 * result + (userName != null ? userName.hashCode() : 0);
-        result = 31 * result + (userRole != null ? userRole.hashCode() : 0);
-        return result;
+            return Objects.hash(userName, userRole, userId);
+    }
+
+    @Override
+    public String toString() {
+        return "Role{" +
+                "username=" + userName +
+                ", userRole='" + userRole + '\'' +
+                ", userId='" + userId + '\'' +
+                '}';
     }
 }

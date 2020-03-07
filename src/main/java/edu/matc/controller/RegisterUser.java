@@ -23,11 +23,11 @@ import java.io.IOException;
 )
 
 public class RegisterUser extends HttpServlet {
-   public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
        ServletContext context = getServletContext();
        HttpSession session = request.getSession();
 
-       GenericDao<User> genericDao = new GenericDao<>(User.class);
+       GenericDao<User>  genericDao = new GenericDao<>(User.class);
 
        String userName = request.getParameter("username");
        // will need to be updated

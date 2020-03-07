@@ -36,7 +36,7 @@
 /log/
 /lib/
 
-# mpeltonen/sbt-idea plugin
+# mpeltonen/sbt-idea pluginv
 .idea_modules/
 
 # JIRA plugin
@@ -47,3 +47,7 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+logs
+src/resources/log4j2.properties
+

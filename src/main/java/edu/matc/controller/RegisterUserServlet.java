@@ -10,10 +10,9 @@ import javax.servlet.annotation.*;
         urlPatterns = { "/userAdd" }
         )
 
-public class AddUser extends HttpServlet {
+public class RegisterUserServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        String url = "/index.jsp";
-
         RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
         dispatcher.forward(request, response);
 

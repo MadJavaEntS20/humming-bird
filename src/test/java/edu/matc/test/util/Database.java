@@ -13,11 +13,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 /**
- * Provides access to the database
+ * Provides access the database
  * Created on 8/31/16.
  *
  * @author pwaite
- * @author Alex M - Fall 2019 - added multi-line sql capability
  */
 
 public class Database {
@@ -27,6 +26,7 @@ public class Database {
     private static Database instance = new Database();
 
     private Properties properties;
+
     private Connection connection;
 
     // private constructor prevents instantiating this class anywhere else
@@ -35,7 +35,6 @@ public class Database {
 
     }
 
-    // TODO use properties loader (interface from adv java)
     private void loadProperties() {
         properties = new Properties();
         try {
@@ -94,23 +93,21 @@ public class Database {
 
         Statement stmt = null;
         ClassLoader classloader = Thread.currentThread().getContextClassLoader();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(classloader.getResourceAsStream(sqlFile))))  {
+        InputStream inputStream = classloader.getResourceAsStream(sqlFile);
+        try (BufferedReader br = new BufferedReader(new InputStreamReader(inputStream))) {
 
+            Class.forName("com.mysql.cj.jdbc.Driver");
             connect();
             stmt = connection.createStatement();
 
-            String sql = "";
-            while (br.ready())
-            {
-                char inputValue = (char)br.read();
-
-                if(inputValue == ';')
-                {
-                    stmt.executeUpdate(sql);
-                    sql = "";
+            while (true) {
+                String sql = br.readLine();
+                if (sql == null) {
+                    break;
                 }
-                else
-                    sql += inputValue;
+                logger.info(sql + "Database.java");
+                stmt.executeUpdate(sql);
+
             }
 
         } catch (SQLException se) {

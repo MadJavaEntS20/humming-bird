@@ -55,4 +55,18 @@ Work with one-to-many relationships, going to one USER has many SIGHTINGS
 Presentation this week on annotations, setting constraints for lat and long to fall
 within a certain range and output that message to the user would be a good use-case
 
-    
+### Week 6
+
+2/25/20 - ∞ hours
+
+Many mistakes were made in attempting to use gitignore and refactor some things
+Also a very nasty stackoverflow error that had nothing to do with my toString method
+Trying to get back on track now
+
+### Week 7
+
+3/3/20 - 11 hours
+
+
+
+

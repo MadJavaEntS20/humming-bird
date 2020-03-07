@@ -28,7 +28,7 @@
                     <c:forEach var="user" items="${users}">
                         <tr>
                         <td>${user.userName}</td>
-                            <c:forEach var="sighting" items="${user.sightings}" varStatus="loop">
+                            <c:forEach var="sighting" items="${user.sighting}" varStatus="loop">
                                 <c:if test="${loop.index gt 0}">
                                     <tr>
                                         <td></td>

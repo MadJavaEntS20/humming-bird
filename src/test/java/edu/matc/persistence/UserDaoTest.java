@@ -1,6 +1,6 @@
 package edu.matc.persistence;
 
-import edu.matc.entity.Sightings;
+import edu.matc.entity.Sighting;
 import edu.matc.entity.User;
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
@@ -26,7 +26,7 @@ class UserDaoTest {
     @BeforeEach
     void setUp() {
         genericDao = new GenericDao(User.class);
-        genericDaoSighting = new GenericDao(Sightings.class);
+        genericDaoSighting = new GenericDao(Sighting.class);
 
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
@@ -39,7 +39,7 @@ class UserDaoTest {
     @Test
     void getAllSuccess() {
         List<User> users = genericDao.getAll();
-        assertEquals(2, users.size());
+        assertEquals(3, users.size());
     }
 
     /**
@@ -73,10 +73,10 @@ class UserDaoTest {
     }
 
     @Test
-    void insertWithSightingSuccess() {
+    void insertWithSightinguccess() {
         User newUser = new User("bsmith", "password123");
-        Sightings newSighting = new Sightings(newUser, -89.9f, 43.9f, "ruby-throated", new java.util.Date(System.currentTimeMillis()), true);
-        newUser.addSightings(newSighting);
+        Sighting newSighting = new Sighting(newUser, -89.9f, 43.9f, "ruby-throated", new java.util.Date(System.currentTimeMillis()), true);
+        newUser.addSighting(newSighting);
         int id = genericDao.insert(newUser);
         assertNotEquals(0, id);
         User insertedUser = (User) genericDao.getById(id);
@@ -89,14 +89,14 @@ class UserDaoTest {
     @Test
     void deleteSuccess() {
         User userToDelete = (User)genericDao.getById(1);
-        Set<Sightings> userToDeleteSightings = userToDelete.getSightings();
-        List<Integer> idOfSightings = new ArrayList<>();
-        for (Sightings s: userToDeleteSightings) {
-            idOfSightings.add(s.getId());
+        Set<Sighting> userToDeleteSighting = userToDelete.getSighting();
+        List<Integer> idOfSighting = new ArrayList<>();
+        for (Sighting s: userToDeleteSighting) {
+            idOfSighting.add(s.getId());
         }
         genericDao.delete(genericDao.getById(1));
         assertNull(genericDao.getById(1));
-        for (Integer id : idOfSightings) {
+        for (Integer id : idOfSighting) {
             assertNull(genericDaoSighting.getById(id));
         }
     }

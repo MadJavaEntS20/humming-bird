@@ -4,6 +4,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -27,7 +28,12 @@ public class User {
     private int id;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
-    private Set<Sightings> sightings =  new HashSet<>();
+    private Set<Sighting> Sightings =  new HashSet<>();
+
+
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Role> roles = new HashSet<>();
 
     /**
      * Instantiates a new User.
@@ -44,6 +50,14 @@ public class User {
     public User(String userName, String userPassword) {
         this.userName = userName;
         this.userPassword = userPassword;
+    }
+
+    public Set<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<Role> roles) {
+        this.roles = roles;
     }
 
     /**
@@ -102,51 +116,53 @@ public class User {
     }
 
     /**
-     * Gets sightings.
+     * Gets Sighting.
      *
-     * @return the sightings
+     * @return the Sighting
      */
-    public Set<Sightings> getSightings() {
-        return sightings;
+    public Set<Sighting> getSighting() {
+        return Sightings;
     }
 
     /**
-     * Sets sightings.
+     * Sets Sighting.
      *
-     * @param sightings the sightings
+     * @param Sighting the Sighting
      */
-    public void setSightings(Set<Sightings> sightings) {
-        this.sightings = sightings;
+    public void setSighting(Set<Sighting> Sighting) {
+        this.Sightings = Sighting;
     }
 
     /**
-     * Add sightings.
+     * Add Sighting.
      *
      * @param sighting the sighting
      */
-    public void addSightings(Sightings sighting) {
-        sightings.add(sighting);
+    public void addSighting(Sighting sighting) {
+        Sightings.add(sighting);
         sighting.setUser(this);
     }
 
     /**
-     * Remove sightings.
+     * Remove Sighting.
      *
      * @param sighting the sighting
      */
-    public void removeSightings(Sightings sighting) {
-        sightings.remove(sighting);
+    public void removeSighting(Sighting sighting) {
+        Sightings.remove(sighting);
         sighting.setUser(null);
     }
-
 
     @Override
     public String toString() {
         return "User{" +
                 "userName='" + userName + '\'' +
-                "userPassword='" + userPassword +
+                ", userPassword='" + userPassword + '\'' +
+                ", id=" + id +
+                ", Sightings=" + Sightings +
                 '}';
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -155,16 +171,13 @@ public class User {
 
         User user = (User) o;
 
-        if (id != user.id) return false;
-        if (!userName.equals(user.userName)) return false;
-        return userPassword.equals(user.userPassword);
+        return id == user.id &&
+                userName.equals(user.userName) &&
+                userPassword.equals(user.userPassword);
     }
 
     @Override
     public int hashCode() {
-        int result = userName.hashCode();
-        result = 31 * result + userPassword.hashCode();
-        result = 31 * result + id;
-        return result;
+        return Objects.hash(userName, userPassword);
     }
 }

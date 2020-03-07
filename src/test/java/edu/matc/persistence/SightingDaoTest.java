@@ -1,6 +1,6 @@
 package edu.matc.persistence;
 
-import edu.matc.entity.Sightings;
+import edu.matc.entity.Sighting;
 import edu.matc.entity.User;
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
@@ -13,9 +13,9 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SightingsDaoTest {
+class SightingDaoTest {
 
-    GenericDao<Sightings> genericDao;
+    GenericDao<Sighting> genericDao;
     GenericDao<User> genericDaoUser;
 
     /**
@@ -25,10 +25,10 @@ class SightingsDaoTest {
      */
     @BeforeEach
     void setUp() {
-        genericDao = new GenericDao<>(Sightings.class);
+        genericDao = new GenericDao<>(Sighting.class);
         genericDaoUser = new GenericDao<>(User.class);
 
-        Database database = edu.matc.test.util.Database.getInstance();
+        Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
     }
 
@@ -37,8 +37,8 @@ class SightingsDaoTest {
      */
     @Test
     void getAllSuccess() {
-        List<Sightings> users = genericDao.getAll();
-        assertEquals(3, users.size());
+        List<Sighting> sightings = genericDao.getAll();
+        assertEquals(3, sightings.size());
     }
 
 
@@ -47,8 +47,8 @@ class SightingsDaoTest {
      */
     @Test
     void getByIdSuccess() {
-        Sightings retrievedSightings = (Sightings) genericDao.getById(2);
-        assertEquals(2, retrievedSightings.getId());
+        Sighting retrievedSighting = (Sighting) genericDao.getById(3);
+        assertEquals(3, retrievedSighting.getId());
     }
 
     /**
@@ -62,10 +62,10 @@ class SightingsDaoTest {
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date javaDate = sdf.parse("06/10/2019 18:29:09");
 
-        Sightings newSighting = new Sightings(newUser, .30f, -12.03f, "ruby-throated", new java.sql.Timestamp (javaDate.getTime()), true );
+        Sighting newSighting = new Sighting(newUser, .30f, -12.03f, "ruby-throated", new java.sql.Timestamp (javaDate.getTime()), true );
         int id = genericDao.insert(newSighting);
         assertNotEquals(0,id);
-        Sightings insertedSighting = (Sightings) genericDao.getById(id);
+        Sighting insertedSighting = (Sighting) genericDao.getById(id);
         assertEquals(insertedSighting.getDateTime(), newSighting.getDateTime());
     }
 
@@ -74,22 +74,22 @@ class SightingsDaoTest {
      */
     @Test
     void deleteSuccess() {
-        Sightings deletedSighting = genericDao.getById(1);
+        Sighting deletedSighting = genericDao.getById(3);
         int userId = deletedSighting.getUser().getId();
         User deletedSightingUser = genericDaoUser.getById(userId);
         genericDao.delete(deletedSighting);
-        assertNull(genericDao.getById(1));
+        assertNull(genericDao.getById(3));
         assertNotNull(deletedSightingUser);
 
     }
 
 
     @Test
-    void updateSightingsSuccess() {
-        Sightings sightingToUpdate = (Sightings) genericDao.getById(2);
+    void updateSightingSuccess() {
+        Sighting sightingToUpdate = (Sighting) genericDao.getById(2);
         sightingToUpdate.setApproved(false);
         genericDao.saveOrUpdate(sightingToUpdate);
-        Sightings retrievedSightings = (Sightings)genericDao.getById(2);
+        Sighting retrievedSighting = (Sighting)genericDao.getById(2);
         assertEquals(sightingToUpdate.getApproved(), false);
     }
 
@@ -98,9 +98,9 @@ class SightingsDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<Sightings> sightings = genericDao.getByPropertyEqual("species", "ruby-throated");
-        assertEquals(3, sightings.size());
-        assertEquals(1, sightings.get(0).getId());
+        List<Sighting> sighting = genericDao.getByPropertyEqual("species", "ruby-throated");
+        assertEquals(3, sighting.size());
+        assertEquals(1, sighting.get(0).getId());
     }
 
     /**
@@ -108,7 +108,7 @@ class SightingsDaoTest {
      */
     @Test
     void getByPropertyLikeSuccess() {
-        List<Sightings> sighting = genericDao.getByPropertyLike("species", "ruby");
+        List<Sighting> sighting = genericDao.getByPropertyLike("species", "ruby");
         assertEquals(3, sighting.size());
     }
 
