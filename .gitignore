@@ -48,6 +48,6 @@ crashlytics.properties
 crashlytics-build.properties
 fabric.properties
 
-logs
+logs/*
 src/resources/log4j2.properties
 

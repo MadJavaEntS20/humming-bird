@@ -5765,3 +5765,296 @@
 [INFO ] 2020-03-08 20:42:25.814 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
 [INFO ] 2020-03-08 20:42:25.887 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
 [INFO ] 2020-03-08 20:42:26.004 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 20:43:01.329 [http-nio-8080-exec-6] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 20:42:26.0', approved:true, id:359}]
+[DEBUG] 2020-03-08 20:43:02.448 [http-nio-8080-exec-8] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 20:42:26.0', approved:true, id:359}]
+[DEBUG] 2020-03-08 20:43:15.291 [http-nio-8080-exec-2] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 20:42:26.0', approved:true, id:359}]
+[DEBUG] 2020-03-08 20:54:13.321 [http-nio-8080-exec-8] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 20:42:26.0', approved:true, id:359}]
+[INFO ] 2020-03-08 21:02:07.938 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:08.207 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:08.207 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:08.208 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:08.310 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:08.462 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:11.171 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:11.380 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:11.382 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:11.382 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:11.607 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:11.773 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:12.039 [main] GenericDao - The list of entities [Role{username=emullendore, userRole='admin', userId='1'}, Role{username=ihecker, userRole='user', userId='2'}, Role{username=emullendore, userRole='user', userId='1'}]
+[INFO ] 2020-03-08 21:02:12.070 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:12.220 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:12.221 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:12.222 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:12.405 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:12.556 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:12.793 [main] GenericDao - Searching for entity with userName = ihecker
+[INFO ] 2020-03-08 21:02:12.878 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:13.186 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:13.187 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:13.188 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:13.419 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:13.643 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:13.839 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:14.034 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:14.035 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:14.036 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:14.304 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:14.611 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:15.080 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:15.399 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:15.400 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:15.401 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:15.648 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:15.816 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:16.357 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:16.520 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:16.521 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:16.522 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:16.716 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:16.878 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:17.447 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:17.567 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:17.567 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:17.568 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:17.790 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:18.131 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:18.305 [main] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}]
+[INFO ] 2020-03-08 21:02:18.324 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:18.557 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:18.557 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:18.558 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:18.697 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:18.874 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:19.112 [main] GenericDao - Searching for entity with species = ruby-throated
+[INFO ] 2020-03-08 21:02:19.147 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:19.288 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:19.289 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:19.289 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:19.452 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:19.560 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:19.647 [main] GenericDao - Searching for user with species = ruby
+[INFO ] 2020-03-08 21:02:19.700 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:19.796 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:19.796 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:19.796 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:19.964 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:20.133 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:20.578 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:20.671 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:20.672 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:20.673 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:20.828 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:20.913 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:21.291 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:21.393 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:21.394 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:21.394 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:21.605 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:21.825 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:22.227 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:22.310 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:22.311 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:22.311 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:22.453 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:22.502 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:22.940 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:23.132 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:23.133 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:23.134 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:23.264 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:23.360 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:23.410 [main] GenericDao - Searching for user with userName = ihecker
+[INFO ] 2020-03-08 21:02:23.437 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:23.519 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:23.519 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:23.520 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:23.665 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:23.796 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:23.923 [main] GenericDao - The list of entities [User{userName='emullendore', userPassword='password1', id=1, Sightings=[{longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}]}, User{userName='ihecker', userPassword='password2', id=2, Sightings=[{longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}]}, User{userName='gmullendore', userPassword='password3', id=3, Sightings=[]}]
+[INFO ] 2020-03-08 21:02:23.941 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:24.150 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:24.151 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:24.152 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:24.296 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:24.370 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:24.467 [main] GenericDao - Searching for entity with userName = emullendore
+[INFO ] 2020-03-08 21:02:24.494 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:24.612 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:24.612 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:24.613 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:24.685 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:24.735 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:24.809 [main] GenericDao - Searching for user with userName = ihec
+[INFO ] 2020-03-08 21:02:24.835 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:24.941 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:24.941 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:24.942 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:25.269 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:25.445 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:25.539 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:25.719 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:25.719 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:25.720 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:25.839 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:25.913 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:26.262 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:26.362 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:26.363 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:26.363 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:26.447 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:26.521 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:02:26.757 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:02:26.859 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:02:26.859 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:02:26.860 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:02:26.979 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:02:27.102 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:02:57.880 [http-nio-8080-exec-5] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:02:27.0', approved:true, id:361}]
+[DEBUG] 2020-03-08 21:02:59.117 [http-nio-8080-exec-7] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:02:27.0', approved:true, id:361}]
+[DEBUG] 2020-03-08 21:03:36.572 [http-nio-8080-exec-5] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:02:27.0', approved:true, id:361}]
+[INFO ] 2020-03-08 21:14:29.366 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:29.642 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:29.643 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:29.644 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:30.189 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:30.613 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:33.849 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:33.966 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:33.967 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:33.968 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:34.085 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:34.252 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:34.770 [main] GenericDao - The list of entities [Role{username=emullendore, userRole='admin', userId='1'}, Role{username=ihecker, userRole='user', userId='2'}, Role{username=emullendore, userRole='user', userId='1'}]
+[INFO ] 2020-03-08 21:14:34.870 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:35.119 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:35.120 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:35.120 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:35.271 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:35.441 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:35.640 [main] GenericDao - Searching for entity with userName = ihecker
+[INFO ] 2020-03-08 21:14:35.690 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:35.896 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:35.897 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:35.898 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:36.015 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:36.178 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:36.329 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:36.455 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:36.455 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:36.456 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:36.638 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:36.803 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:37.200 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:37.313 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:37.314 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:37.314 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:37.387 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:37.483 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:37.809 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:37.916 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:37.917 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:37.917 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:37.990 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:38.064 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:38.335 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:38.436 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:38.436 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:38.437 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:38.676 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:38.772 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:38.906 [main] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}]
+[INFO ] 2020-03-08 21:14:38.961 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:39.045 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:39.046 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:39.046 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:39.118 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:39.228 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:39.325 [main] GenericDao - Searching for entity with species = ruby-throated
+[INFO ] 2020-03-08 21:14:39.361 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:39.409 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:39.410 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:39.410 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:39.458 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:39.532 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:39.801 [main] GenericDao - Searching for user with species = ruby
+[INFO ] 2020-03-08 21:14:39.837 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:39.943 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:39.944 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:39.945 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:40.042 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:40.138 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:40.215 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:40.332 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:40.333 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:40.333 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:40.417 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:40.538 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:40.880 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:40.985 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:40.986 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:40.986 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:41.071 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:41.145 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:41.401 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:41.483 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:41.484 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:41.484 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:41.731 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:41.804 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:42.040 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:42.169 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:42.170 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:42.170 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:42.254 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:42.375 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:42.450 [main] GenericDao - Searching for user with userName = ihecker
+[INFO ] 2020-03-08 21:14:42.480 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:42.667 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:42.668 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:42.668 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:42.764 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:42.865 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:43.010 [main] GenericDao - The list of entities [User{userName='emullendore', userPassword='password1', id=1, Sightings=[{longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}]}, User{userName='ihecker', userPassword='password2', id=2, Sightings=[{longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}]}, User{userName='gmullendore', userPassword='password3', id=3, Sightings=[]}]
+[INFO ] 2020-03-08 21:14:43.027 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:43.157 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:43.158 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:43.158 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:43.275 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:43.372 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:43.479 [main] GenericDao - Searching for entity with userName = emullendore
+[INFO ] 2020-03-08 21:14:43.568 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:43.778 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:43.778 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:43.779 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:43.932 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:44.062 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:14:44.216 [main] GenericDao - Searching for user with userName = ihec
+[INFO ] 2020-03-08 21:14:44.239 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:44.383 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:44.384 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:44.384 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:44.578 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:44.861 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:45.001 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:45.380 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:45.380 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:45.381 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:46.094 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:46.388 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:46.918 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:47.105 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:47.106 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:47.107 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:47.246 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:47.555 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[INFO ] 2020-03-08 21:14:47.964 [main] Database - delete from users;Database.java
+[INFO ] 2020-03-08 21:14:48.064 [main] Database - delete from user_roles;Database.java
+[INFO ] 2020-03-08 21:14:48.065 [main] Database - delete from sightings;Database.java
+[INFO ] 2020-03-08 21:14:48.065 [main] Database - INSERT INTO users VALUES (1, 'emullendore','password1'),(2,'ihecker','password2'), (3, 'gmullendore', 'password3');Database.java
+[INFO ] 2020-03-08 21:14:48.207 [main] Database - INSERT INTO user_roles VALUES (1, 'emullendore','admin', 1),(2, 'ihecker','user', 2), (3, 'emullendore', 'user', 1);Database.java
+[INFO ] 2020-03-08 21:14:48.314 [main] Database - INSERT INTO sightings VALUES (1,42.073051,-89.501230,'ruby-throated','2020-02-16 10:49:10',1,1), (2,47.073051,-90.401230,'ruby-throated','2020-02-16 10:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 10:50:51',0,2);Database.java
+[DEBUG] 2020-03-08 21:15:20.839 [http-nio-8080-exec-5] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:14:48.0', approved:true, id:363}]
+[DEBUG] 2020-03-08 21:15:22.049 [http-nio-8080-exec-9] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:14:48.0', approved:true, id:363}]
+[DEBUG] 2020-03-08 21:16:47.250 [http-nio-8080-exec-3] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:14:48.0', approved:true, id:363}]
+[DEBUG] 2020-03-08 21:16:48.579 [http-nio-8080-exec-4] GenericDao - The list of entities [{longitude:42.07305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:1}, {longitude:47.07305, latitude:-90.40123, species:'ruby-throated', dateTime:'2020-02-16 10:49:10.0', approved:true, id:2}, {longitude:43.06305, latitude:-89.50123, species:'ruby-throated', dateTime:'2020-02-02 10:50:51.0', approved:false, id:3}, {longitude:-89.9, latitude:43.9, species:'ruby-throated', dateTime:'2020-03-08 21:14:48.0', approved:true, id:363}]

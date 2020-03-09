@@ -1,4 +1,3 @@
-<%--<jsp:useBean id="userAddMessage" scope="request" type="java"/>--%>
 <%@include file="head.jsp"%>
 <html>
 <body>

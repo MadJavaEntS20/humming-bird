@@ -28,5 +28,5 @@
         </div>
     </div>
 </div>
-
+<script src="JS/mainMap.js"></script>
 <%@include file="footer.jsp"%>

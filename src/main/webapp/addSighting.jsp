@@ -33,5 +33,7 @@
         </div>
     </div>
 </div>
+<script src="JS/currentDate.js"></script>
+<script src="JS/currentLocation.js"></script>
 <%@include file="footer.jsp"%>
 
