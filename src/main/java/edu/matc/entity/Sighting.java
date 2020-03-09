@@ -1,5 +1,6 @@
 package edu.matc.entity;
 
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -22,6 +23,8 @@ public class Sighting {
     @Column(name = "species")
     private String species;
 
+//    @CreationTimestamp
+//    @Temporal(TemporalType.DATE)
     @Column(name = "date_time")
     private Date dateTime; // localDate data type?
 

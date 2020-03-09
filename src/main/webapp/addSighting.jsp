@@ -1,34 +1,37 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ekmul
-  Date: 3/6/2020
-  Time: 3:53 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="head.jsp"%>
 <html>
-<head>
-    <title>Title</title>
-</head>
 <body>
+<%@include file="navigation.jsp"%>
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
 
-<form action="InputSighting">
-    <div class="form-group">
-        <label for="locationInput">Location</label>
-        <input type="text" class="form-control" id="locationInput" name="location" placeholder="Enter location"/>
+            <form action="InputSighting">
+                <div class="form-group">
+                    <label for="locationInput">Location</label>
+                    <button id="locationInputCurrent">Current Location</button>
+                    <p id="status"></p>
+                    <input type="text" id="locationLatitude" name="latitude">
+                    <input type="text" id="locationLongitude" name="longitude">
 
-        <label for="dateTime">Time</label>
-        <input type="datetime-local" class="form-control" id="dateTime" name="dateTime" placeholder="Enter Date and Time"/>
+                    <input type="text" class="form-control" id="locationInput" name="location" placeholder="Enter location manually"/>
 
-        <label for="species">Species</label>
-        <select id="species" name="species">
-            <option value="ruby-throated">ruby-throated</option>
-            <option>b</option>
-            <option>c</option>
-            <option>d</option>
-        </select>
+                    <label for="dateTime">Time</label>
+                    <input type="datetime-local" class="form-control" id="dateTime" name="dateTime" placeholder="Enter Date and Time"/>
+
+                    <label for="species">Species</label>
+                    <select id="species" name="species">
+                        <option value="ruby-throated">ruby-throated</option>
+                        <option value="rufous">rufous</option>
+                        <option value="green-violetear">green violetear</option>
+                        <option value="broad-billed">broad-billed</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
     </div>
-</form>
+</div>
+<%@include file="footer.jsp"%>
 
-</body>
-</html>

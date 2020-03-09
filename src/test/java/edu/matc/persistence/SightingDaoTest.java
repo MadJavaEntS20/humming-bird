@@ -57,7 +57,6 @@ class SightingDaoTest {
     @Test
     void insertSuccess() throws ParseException {
         User newUser = new User("gmullendore", "password3");
-        Date date = new Date();
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date javaDate = sdf.parse("06/10/2019 18:29:09");

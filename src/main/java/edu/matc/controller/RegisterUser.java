@@ -24,7 +24,6 @@ import java.io.IOException;
 
 public class RegisterUser extends HttpServlet {
    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-       ServletContext context = getServletContext();
        HttpSession session = request.getSession();
 
        GenericDao<User>  genericDao = new GenericDao<>(User.class);

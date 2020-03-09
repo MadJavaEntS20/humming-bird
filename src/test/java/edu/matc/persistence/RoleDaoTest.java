@@ -76,7 +76,7 @@ class RoleDaoTest {
     @Test
     void getAllSuccess() {
         List<Role> users = (List<Role>)genericDao.getAll();
-        assertEquals(2, users.size());
+        assertEquals(3, users.size());
     }
 
     /**
