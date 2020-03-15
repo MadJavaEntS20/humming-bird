@@ -11,12 +11,6 @@
             <h3>${userAddMessage}</h3>
             <c:remove var="userAddMessage"/>
 
-            <a href="login.jsp">Log in</a>
-
-            <c:if test="{pageContext.request.isUserInRole('admin')}">
-                <p>logged in as admin</p>
-            </c:if>
-
             <a href="addSighting.jsp">Add Sighting</a>
             <h2>Map</h2>
 

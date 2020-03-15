@@ -7,10 +7,10 @@
     <div class="row">
         <div class="col-lg-12 text-center">
 
-            <form action="InputSighting">
+            <form action="${pageContext.request.contextPath}/InputSighting" method="post">
                 <div class="form-group">
                     <label for="locationInput">Location</label>
-                    <button id="locationInputCurrent">Current Location</button>
+                    <div id="locationInputCurrent">Current Location</div>
                     <p id="status"></p>
                     <input type="text" id="locationLatitude" name="latitude">
                     <input type="text" id="locationLongitude" name="longitude">

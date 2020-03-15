@@ -27,4 +27,4 @@ function geoFindMe() {
 
 }
 
-document.querySelector('#locationInputCurrent').addEventListener('click', geoFindMe);
+document.querySelector('#locationInputCurrent').addEventListener('click', geoFindMe, false);

@@ -16,16 +16,25 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="Sightings">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
+                <li class="nav-item">
+                    <a href ="loginAction">Log In</a>
                 </li>
-                <c:if test="{pageContext.request.isUserInRole('admin')}">
-                    <li class="nav-item">Admin</li>
+                <c:if test="${pageContext.request.isUserInRole('admin')}">
+                    <li class="nav-item">
+                        <span class="navbar-text">
+                            Admin
+                        </span>
+                    </li>
                 </c:if>
-                <c:if test="{pageContext.request.isUserInRole('user')}">
-                    <li class="nav-item">User</li>
+                <c:if test="${pageContext.request.isUserInRole('user')}">
+                    <li class="nav-item">
+                    <a class="navbar-text" href="/userPage.jsp">
+                        ${pageContext.request.getRemoteUser()}
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href ="logoutAction">Log Out</a>
+                    </li>
                 </c:if>
                 <li class="nav-item">
                     <a class="nav-link" href="register.jsp">Register</a>
