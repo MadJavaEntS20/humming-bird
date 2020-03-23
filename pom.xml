@@ -93,6 +93,50 @@
       <artifactId>hibernate-c3p0</artifactId>
       <version>5.4.4.Final</version>
     </dependency>
+    <dependency>
+      <groupId>jstl</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.9</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.glassfish.jersey.core</groupId>
+      <artifactId>jersey-client</artifactId>
+      <version>${jersey-version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
+
+    <dependency>
+      <groupId>org.glassfish.jersey.inject</groupId>
+      <artifactId>jersey-hk2</artifactId>
+      <version>${jersey-version}</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson-version}</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>Individual Project</finalName>
@@ -111,50 +155,6 @@
               <groupId>org.junit.platform</groupId>
               <artifactId>junit-platform-surefire-provider</artifactId>
               <version>${junit-platform-runner-version}</version>
-            </dependency>
-            <dependency>
-              <groupId>jstl</groupId>
-              <artifactId>jstl</artifactId>
-              <version>1.2</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-            <dependency>
-              <groupId>org.apache.commons</groupId>
-              <artifactId>commons-lang3</artifactId>
-              <version>3.9</version>
-            </dependency>
-
-            <dependency>
-              <groupId>org.glassfish.jersey.core</groupId>
-              <artifactId>jersey-client</artifactId>
-              <version>${jersey-version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/org.glassfish.jersey.core/jersey-client -->
-
-            <dependency>
-              <groupId>org.glassfish.jersey.inject</groupId>
-              <artifactId>jersey-hk2</artifactId>
-              <version>${jersey-version}</version>
-            </dependency>
-            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
-            <dependency>
-              <groupId>com.fasterxml.jackson.core</groupId>
-              <artifactId>jackson-core</artifactId>
-              <version>${jackson-version}</version>
-            </dependency>
-
-            <dependency>
-              <groupId>com.fasterxml.jackson.core</groupId>
-              <artifactId>jackson-annotations</artifactId>
-              <version>${jackson-version}</version>
-            </dependency>
-
-            <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-
-            <dependency>
-              <groupId>com.fasterxml.jackson.core</groupId>
-              <artifactId>jackson-databind</artifactId>
-              <version>${jackson-version}</version>
             </dependency>
           </dependencies>
         </plugin>

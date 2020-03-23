@@ -50,4 +50,12 @@ fabric.properties
 
 logs
 src/resources/log4j2.properties
+src/resources
+test/resources/database.properties
+test/resources/hibernate.cfg.xml
+
+src/main/resources/database.properties
+src/main/resources/hibernate.cfg.xml
+
+
 

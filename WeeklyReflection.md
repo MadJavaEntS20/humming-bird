@@ -67,6 +67,20 @@ Trying to get back on track now
 
 3/3/20 - 11 hours
 
+Deploying the AWS had some bumps in the road, as was expected
+I had to use Putty because of my windows machine
+I can deploy it, but the url is not accessible anywhere outside of my current
+ip and environment. will there be a way I can eventually share this
+with friends and family?
+
+
+3/10/20 - 10 hours
+
+Lots of time trying to get login working
+Adding sighting to map now requires login
+
+
+
 
 
 
