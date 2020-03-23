@@ -20,7 +20,7 @@ public class GenericDao<T> {
 
     }
 
-    /** Return a list of all users
+    /** Return a list of all users,
      *
      * @return All entities
      */
