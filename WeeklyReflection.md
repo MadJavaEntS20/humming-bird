@@ -79,6 +79,9 @@ with friends and family?
 Lots of time trying to get login working
 Adding sighting to map now requires login
 
+3/24/20 - 6 hours
+
+
 
 
 

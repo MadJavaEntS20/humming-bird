@@ -1,6 +1,8 @@
 package edu.matc.api;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class Components{
 
@@ -13,14 +15,17 @@ public class Components{
 	@JsonProperty("country_code")
 	private String countryCode;
 
-	@JsonProperty("town")
-	private String town;
-
-	@JsonProperty("road")
-	private String road;
+	@JsonProperty("city")
+	private String city;
 
 	@JsonProperty("_type")
 	private String type;
+
+	@JsonProperty("county")
+	private String county;
+
+	@JsonProperty("postcode")
+	private String postcode;
 
 	@JsonProperty("ISO_3166-1_alpha-2")
 	private String iSO31661Alpha2;
@@ -61,20 +66,12 @@ public class Components{
 		return countryCode;
 	}
 
-	public void setTown(String town){
-		this.town = town;
+	public void setCity(String city){
+		this.city = city;
 	}
 
-	public String getTown(){
-		return town;
-	}
-
-	public void setRoad(String road){
-		this.road = road;
-	}
-
-	public String getRoad(){
-		return road;
+	public String getCity(){
+		return city;
 	}
 
 	public void setType(String type){
@@ -83,6 +80,22 @@ public class Components{
 
 	public String getType(){
 		return type;
+	}
+
+	public void setCounty(String county){
+		this.county = county;
+	}
+
+	public String getCounty(){
+		return county;
+	}
+
+	public void setPostcode(String postcode){
+		this.postcode = postcode;
+	}
+
+	public String getPostcode(){
+		return postcode;
 	}
 
 	public void setISO31661Alpha2(String iSO31661Alpha2){
@@ -132,9 +145,10 @@ public class Components{
 			"continent = '" + continent + '\'' + 
 			",country = '" + country + '\'' + 
 			",country_code = '" + countryCode + '\'' + 
-			",town = '" + town + '\'' + 
-			",road = '" + road + '\'' + 
+			",city = '" + city + '\'' + 
 			",_type = '" + type + '\'' + 
+			",county = '" + county + '\'' + 
+			",postcode = '" + postcode + '\'' + 
 			",iSO_3166-1_alpha-2 = '" + iSO31661Alpha2 + '\'' + 
 			",_category = '" + category + '\'' + 
 			",iSO_3166-1_alpha-3 = '" + iSO31661Alpha3 + '\'' + 

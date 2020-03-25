@@ -1,14 +1,13 @@
 package edu.matc.api;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class Roadinfo{
 
 	@JsonProperty("drive_on")
 	private String driveOn;
-
-	@JsonProperty("road")
-	private String road;
 
 	@JsonProperty("speed_in")
 	private String speedIn;
@@ -19,14 +18,6 @@ public class Roadinfo{
 
 	public String getDriveOn(){
 		return driveOn;
-	}
-
-	public void setRoad(String road){
-		this.road = road;
-	}
-
-	public String getRoad(){
-		return road;
 	}
 
 	public void setSpeedIn(String speedIn){
@@ -42,7 +33,6 @@ public class Roadinfo{
 		return 
 			"Roadinfo{" + 
 			"drive_on = '" + driveOn + '\'' + 
-			",road = '" + road + '\'' + 
 			",speed_in = '" + speedIn + '\'' + 
 			"}";
 		}

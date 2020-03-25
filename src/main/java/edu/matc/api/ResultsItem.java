@@ -1,6 +1,8 @@
 package edu.matc.api;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class ResultsItem{
 
@@ -12,6 +14,9 @@ public class ResultsItem{
 
 	@JsonProperty("confidence")
 	private int confidence;
+
+	@JsonProperty("bounds")
+	private Bounds bounds;
 
 	@JsonProperty("annotations")
 	private Annotations annotations;
@@ -43,6 +48,14 @@ public class ResultsItem{
 		return confidence;
 	}
 
+	public void setBounds(Bounds bounds){
+		this.bounds = bounds;
+	}
+
+	public Bounds getBounds(){
+		return bounds;
+	}
+
 	public void setAnnotations(Annotations annotations){
 		this.annotations = annotations;
 	}
@@ -66,6 +79,7 @@ public class ResultsItem{
 			"components = '" + components + '\'' + 
 			",formatted = '" + formatted + '\'' + 
 			",confidence = '" + confidence + '\'' + 
+			",bounds = '" + bounds + '\'' + 
 			",annotations = '" + annotations + '\'' + 
 			",geometry = '" + geometry + '\'' + 
 			"}";

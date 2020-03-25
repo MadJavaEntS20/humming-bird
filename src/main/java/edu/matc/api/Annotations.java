@@ -1,7 +1,8 @@
 package edu.matc.api;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Annotations{
 
 	@JsonProperty("flag")
@@ -48,6 +49,9 @@ public class Annotations{
 
 	@JsonProperty("roadinfo")
 	private Roadinfo roadinfo;
+
+	@JsonProperty("wikidata")
+	private String wikidata;
 
 	@JsonProperty("MGRS")
 	private String mGRS;
@@ -172,6 +176,14 @@ public class Annotations{
 		return roadinfo;
 	}
 
+	public void setWikidata(String wikidata){
+		this.wikidata = wikidata;
+	}
+
+	public String getWikidata(){
+		return wikidata;
+	}
+
 	public void setMGRS(String mGRS){
 		this.mGRS = mGRS;
 	}
@@ -199,6 +211,7 @@ public class Annotations{
 			",geohash = '" + geohash + '\'' + 
 			",currency = '" + currency + '\'' + 
 			",roadinfo = '" + roadinfo + '\'' + 
+			",wikidata = '" + wikidata + '\'' + 
 			",mGRS = '" + mGRS + '\'' + 
 			"}";
 		}

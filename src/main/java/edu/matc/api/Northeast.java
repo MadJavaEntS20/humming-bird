@@ -4,34 +4,34 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 
-public class DMS{
+public class Northeast{
 
 	@JsonProperty("lng")
-	private String lng;
+	private double lng;
 
 	@JsonProperty("lat")
-	private String lat;
+	private double lat;
 
-	public void setLng(String lng){
+	public void setLng(double lng){
 		this.lng = lng;
 	}
 
-	public String getLng(){
+	public double getLng(){
 		return lng;
 	}
 
-	public void setLat(String lat){
+	public void setLat(double lat){
 		this.lat = lat;
 	}
 
-	public String getLat(){
+	public double getLat(){
 		return lat;
 	}
 
 	@Override
  	public String toString(){
 		return 
-			"DMS{" + 
+			"Northeast{" + 
 			"lng = '" + lng + '\'' + 
 			",lat = '" + lat + '\'' + 
 			"}";
