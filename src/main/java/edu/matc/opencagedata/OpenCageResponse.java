@@ -1,12 +1,11 @@
-package edu.matc.api;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+package edu.matc.opencagedata;
 
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.annotation.Generated;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class Response{
+@Generated("com.robohorse.robopojogenerator")
+public class OpenCageResponse{
 
 	@JsonProperty("thanks")
 	private String thanks;
@@ -110,7 +109,7 @@ public class Response{
 	@Override
  	public String toString(){
 		return 
-			"Response{" + 
+			"OpenCageResponse{" + 
 			"thanks = '" + thanks + '\'' + 
 			",licenses = '" + licenses + '\'' + 
 			",rate = '" + rate + '\'' + 

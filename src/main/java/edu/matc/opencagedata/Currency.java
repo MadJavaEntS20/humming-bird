@@ -1,11 +1,10 @@
-package edu.matc.api;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
+package edu.matc.opencagedata;
 
 import java.util.List;
-@JsonIgnoreProperties(ignoreUnknown = true)
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.annotation.Generated;
 
+@Generated("com.robohorse.robopojogenerator")
 public class Currency{
 
 	@JsonProperty("thousands_separator")

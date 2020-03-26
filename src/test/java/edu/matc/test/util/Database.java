@@ -1,10 +1,10 @@
 package edu.matc.test.util;
 
+import edu.matc.utilities.PropertiesLoader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.sql.Connection;
@@ -19,7 +19,7 @@ import java.util.Properties;
  * @author pwaite
  */
 
-public class Database {
+public class Database implements PropertiesLoader {
 
     private final Logger logger = LogManager.getLogger(this.getClass());
     // create an object of the class Database
@@ -31,22 +31,7 @@ public class Database {
 
     // private constructor prevents instantiating this class anywhere else
     private Database() {
-        loadProperties();
-
-    }
-
-    private void loadProperties() {
-        properties = new Properties();
-        try {
-            properties.load (this.getClass().getResourceAsStream("/database.properties"));
-        } catch (IOException ioe) {
-            System.out.println("Database.loadProperties()...Cannot load the properties file");
-            ioe.printStackTrace();
-        } catch (Exception e) {
-            System.out.println("Database.loadProperties()..." + e);
-            e.printStackTrace();
-        }
-
+        properties = loadProperties("/database.properties");
     }
 
     // get the only Database object available
@@ -110,10 +95,8 @@ public class Database {
 
             }
 
-        } catch (SQLException se) {
+        } catch (Exception se) {
             logger.error(se);
-        } catch (Exception e) {
-            logger.error(e);
         } finally {
             disconnect();
         }

@@ -1,8 +1,10 @@
-package edu.matc.api;
+package edu.matc.opencagedata;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.annotation.Generated;
 
-public class Geometry{
+@Generated("com.robohorse.robopojogenerator")
+public class Southwest{
 
 	@JsonProperty("lng")
 	private double lng;
@@ -29,7 +31,7 @@ public class Geometry{
 	@Override
  	public String toString(){
 		return 
-			"Geometry{" + 
+			"Southwest{" + 
 			"lng = '" + lng + '\'' + 
 			",lat = '" + lat + '\'' + 
 			"}";

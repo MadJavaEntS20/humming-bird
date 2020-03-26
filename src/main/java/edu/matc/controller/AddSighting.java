@@ -59,7 +59,7 @@ public class AddSighting extends HttpServlet {
 
         // get the new user from session?
         if (request.getRemoteUser() != null) {
-            newUser = (User) daoUser.getByPropertyEqual("userName", request.getRemoteUser());
+            newUser = (User) daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
         } else {
             newUser = new User("test", "test");
         }

@@ -1,9 +1,9 @@
-package edu.matc.api;
+package edu.matc.opencagedata;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-@JsonIgnoreProperties(ignoreUnknown = true)
+import javax.annotation.Generated;
 
+@Generated("com.robohorse.robopojogenerator")
 public class Roadinfo{
 
 	@JsonProperty("drive_on")

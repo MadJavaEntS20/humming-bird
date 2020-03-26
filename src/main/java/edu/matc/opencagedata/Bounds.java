@@ -1,11 +1,9 @@
-package edu.matc.api;
+package edu.matc.opencagedata;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.annotation.Generated;
 
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-
+@Generated("com.robohorse.robopojogenerator")
 public class Bounds{
 
 	@JsonProperty("southwest")
