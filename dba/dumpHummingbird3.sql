@@ -34,7 +34,7 @@ CREATE TABLE `sightings` (
   UNIQUE KEY `sightings_id_uindex` (`id`),
   KEY `sightings_users_id_fk` (`user_id`),
   CONSTRAINT `sightings_users_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=362 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=463 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `sightings` (
 
 LOCK TABLES `sightings` WRITE;
 /*!40000 ALTER TABLE `sightings` DISABLE KEYS */;
-INSERT INTO `sightings` VALUES (1,42.073051,-89.501228,'ruby-throated','2020-02-16 16:49:10',1,1),(2,47.073051,-90.401230,'ruby-throated','2020-02-16 16:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 16:50:51',0,2),(361,-89.900002,43.900002,'ruby-throated','2020-03-09 02:02:27',1,530);
+INSERT INTO `sightings` VALUES (1,42.073051,-89.501228,'ruby-throated','2020-02-16 16:49:10',1,1),(2,47.073051,-90.401230,'ruby-throated','2020-02-16 16:49:10',1,1),(3,43.063049,-89.501228,'ruby-throated','2020-02-02 16:50:51',0,2),(462,-89.900002,43.900002,'ruby-throated','2020-03-26 21:06:54',1,661);
 /*!40000 ALTER TABLE `sightings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -62,7 +62,7 @@ CREATE TABLE `user_roles` (
   PRIMARY KEY (`id`),
   KEY `user_roles_users_id_fk` (`user_id`),
   CONSTRAINT `user_roles_users_id_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -87,7 +87,7 @@ CREATE TABLE `users` (
   `user_name` varchar(20) NOT NULL,
   `user_password` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=531 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=662 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'emullendore','password1'),(2,'ihecker','password2'),(3,'gmullendore','password3'),(530,'bsmith','password123');
+INSERT INTO `users` VALUES (1,'emullendore','password1'),(2,'ihecker','password2'),(3,'gmullendore','password3'),(661,'bsmith','password123');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-03-08 21:08:41
+-- Dump completed on 2020-03-26 16:24:25

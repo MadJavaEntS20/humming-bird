@@ -5,6 +5,8 @@ sightingsObject.forEach(obj => {
         geometry: new ol.geom.Point(ol.proj.fromLonLat([obj.latitude, obj.longitude]))
     });
 
+    console.log(iconFeature, 'iconFeature');
+
     let iconStyle = new ol.style.Style({
         image: new ol.style.Circle({
             radius: 6,
@@ -16,7 +18,9 @@ sightingsObject.forEach(obj => {
                 color: 'Crimson'
             })
         })
-    })
+    });
+
+    console.log(iconStyle, 'iconStyle');
     iconFeature.setStyle(iconStyle);
     iconFeatureArray.push(iconFeature);
 });
@@ -42,3 +46,5 @@ const map = new ol.Map({
         zoom: 5
     })
 });
+
+console.log('map', map, 'vectorLayer', vectorLayer, 'vectorSource', vectorSource, 'iconFeatureArray', iconFeatureArray);

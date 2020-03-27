@@ -12,7 +12,6 @@
                     <label for="locationInput">Location</label>
                     <div id="locationInputCurrent">Current Location</div>
                     <p id="status"></p>
-                    <input type="text" id="locationLatitude" name="latitude">
                     <input type="text" id="locationLongitude" name="longitude">
 
                     <input type="text" class="form-control" id="locationInput" name="location" placeholder="Enter location manually"/>

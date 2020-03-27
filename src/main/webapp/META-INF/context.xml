@@ -1,4 +1,4 @@
-<Context docBase="IndividualProject_war" path="/IndividualProject_war" reloadable="true">
+<Context docBase="fluttr" path="/fluttr" reloadable="true">
     <Realm className="org.apache.catalina.realm.JDBCRealm"
            driverName="com.mysql.cj.jdbc.Driver"
            connectionURL="jdbc:mysql://localhost:3306/hummingbird2?user=tomcat&amp;password=tomcat"

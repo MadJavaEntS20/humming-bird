@@ -18,6 +18,7 @@
 
             <script type="text/javascript">
                 let sightingsObject = ${sightings};
+                console.log(sightingsObject);
             </script>
         </div>
     </div>

@@ -17,14 +17,28 @@ public class OpenCageDao implements PropertiesLoader {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
 
-    OpenCageResponse getResponseData() {
+    public OpenCageResponse getResponseData() {
         Client client = ClientBuilder.newClient();
-        //TODO read in the uri from a property file
         Properties properties;
         properties = loadProperties("/database.properties");
 
         WebTarget target =
                 client.target(properties.getProperty("url_api"));
+        return getOpenCageResponse(target);
+    }
+
+    public OpenCageResponse getResponseDataWithParam(String input) {
+        Client client = ClientBuilder.newClient();
+        Properties properties;
+        properties = loadProperties("/database.properties");
+
+        WebTarget target =
+                client.target(properties.getProperty("url_api_param") + input);
+        logger.info(properties.getProperty("url_api_param") + input);
+        return getOpenCageResponse(target);
+    }
+
+    private OpenCageResponse getOpenCageResponse(WebTarget target) {
         String response = target.request(MediaType.APPLICATION_JSON).get(String.class);
         ObjectMapper mapper = new ObjectMapper();
         OpenCageResponse openCageResponse= null;
