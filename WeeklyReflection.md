@@ -81,6 +81,9 @@ Adding sighting to map now requires login
 
 3/24/20 - 6 hours
 
+Struggled with getting aws to implement login. This was caused by not setting a coule variables in context.xml
+Need to do form validation, logout function, CRUD UI
+
 
 
 
