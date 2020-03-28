@@ -73,11 +73,13 @@ I can deploy it, but the url is not accessible anywhere outside of my current
 ip and environment. will there be a way I can eventually share this
 with friends and family?
 
-
+### Week 8
 3/10/20 - 10 hours
 
 Lots of time trying to get login working
 Adding sighting to map now requires login
+
+### Week 9
 
 3/24/20 - 6 hours
 
