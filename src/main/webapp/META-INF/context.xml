@@ -4,5 +4,11 @@
            connectionURL="jdbc:mysql://localhost:3306/hummingbird2?user=tomcat&amp;password=tomcat"
            userTable="users" userNameCol="user_name" userCredCol="user_password"
            userRoleTable="user_roles" roleNameCol="user_role" >
+
+<!--        <CredentialHandler-->
+<!--                className="org.apache.catalina.realm.MessageDigestCredentialHandler"-->
+<!--                algorithm="sha-256"-->
+<!--                encoding="UTF-8"-->
+<!--        />-->
     </Realm>
 </Context>

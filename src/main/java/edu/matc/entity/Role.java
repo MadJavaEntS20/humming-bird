@@ -1,7 +1,5 @@
 package edu.matc.entity;
 import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.OnDelete;
-import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -39,8 +37,7 @@ public class Role {
     /**
      * Instantiates a new Role.
      */
-    public Role() {
-    }
+    public Role() { }
 
     /*
      * Instantiates a new Role.
@@ -60,6 +57,7 @@ public class Role {
     public void setUser(User user) {
         this.user = user;
     }
+
     public int getUserId() {
         return userId;
     }

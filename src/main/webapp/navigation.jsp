@@ -16,9 +16,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
+                <c:if test="${pageContext.request.getRemoteUser() == null}">
                 <li class="nav-item">
-                    <a href ="loginAction">Log In</a>
+                    <a class="nav-link" href ="loginAction">Log In</a>
                 </li>
+                </c:if>
                 <c:if test="${pageContext.request.isUserInRole('admin')}">
                     <li class="nav-item">
                         <span class="navbar-text">
@@ -28,20 +30,26 @@
                 </c:if>
                 <c:if test="${pageContext.request.isUserInRole('user')}">
                     <li class="nav-item">
-                    <a class="navbar-text" href="/userPage.jsp">
-                        ${pageContext.request.getRemoteUser()}
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href ="logoutAction">Log Out</a>
+                        <a  class="nav-link" href="singleUser">
+                            ${pageContext.request.getRemoteUser()}
+                        </a>
                     </li>
                 </c:if>
-                <li class="nav-item">
-                    <a class="nav-link" href="register.jsp">Register</a>
-                </li>
-                <li class="nav-item">
+                <c:if test="${pageContext.request.getRemoteUser() != null}">
+                    <li class="nav-item">
+                        <a class="nav-link" href ="logoutAction">Log Out</a>
+                    </li>
+                </c:if>
+                <c:if test="${pageContext.request.getRemoteUser() == null}">
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.jsp">Register</a>
+                    </li>
+                </c:if>
+                <c:if test="${pageContext.request.isUserInRole('admin')}">
+                 <li class="nav-item">
                     <a class="nav-link" href="searchUser.jsp">Search Users</a>
-                </li>
+                 </li>
+                </c:if>
             </ul>
         </div>
     </div>
