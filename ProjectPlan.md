@@ -1,75 +1,75 @@
 # Project Plan
 
 ### Week 3
-- [ ] Create project repository on GitHub
-- [ ] Create project structure in intellij and push
-- [ ] Add link to list of indie projects in student repo.
-- [ ] Complete Problem Statement
-- [ ] Determine possible Web Services or APIs to use
-- [ ] List technologies, versions and how they will be used
-- [ ] Weekly journal entry
-- [ ] Write project plan
-- [ ] Document application flow in text and pictures - I'll use wireframes that have clickable links for the screen design.
-- [ ] Triple-check for Checkpoint 1: Problem statement, project plan, screen design and time log pushed to GitHub. 
+- [x] Create project repository on GitHub
+- [x] Create project structure in intellij and push
+- [x] Add link to list of indie projects in student repo.
+- [x] Complete Problem Statement
+- [x] Determine possible Web Services or APIs to use
+- [x] List technologies, versions and how they will be used
+- [x] Weekly journal entry
+- [x] Write project plan
+- [x] Document application flow in text and pictures - I'll use wireframes that have clickable links for the screen design.
+- [x] Triple-check for Checkpoint 1: Problem statement, project plan, screen design and time log pushed to GitHub. 
 
 ### Week 4
-- [ ] Complete database design
-- [ ] Create the database and user table
-- [ ] Create the user entity class and annotate for hibernate
-- [ ] Create user dao
-- [ ] Create the test database
-- [ ] Create user dao unit tests
-- [ ] Weekly journal entry
-- [ ] Set up logging
-- [ ] Create class uml diagram
-- [ ] Prepare for Week 5 peer design/code review
+- [x] Complete database design
+- [x] Create the database and user table
+- [x] Create the user entity class and annotate for hibernate
+- [x] Create user dao
+- [x] Create the test database
+- [x] Create user dao unit tests
+- [x] Weekly journal entry
+- [x] Set up logging
+- [x] Create class uml diagram
+- [x] Prepare for Week 5 peer design/code review
 
 
 ### Week 5
 
-- [ ] Create the template for all jsps using bootstrap or materialize
-- [ ] Weekly journal entry
-- [ ] Add the role table
-- [ ] Add the role entity
-- [ ] Create the role dao
-- [ ] Create the role dao unit tests
-- [ ] Add a jsp to display user and role
-- [ ] Add jsp to add a user
+- [x] Create the template for all jsps using bootstrap or materialize
+- [x] Weekly journal entry
+- [x] Add the role table
+- [x] Add the role entity
+- [x] Create the role dao
+- [x] Create the role dao unit tests
+- [x] Add a jsp to display user and role
+- [x] Add jsp to add a user
 
 ### Week 6
 
-- [ ] Create db on AWS
-- [ ] Deploy to AWS for first time
-- [ ] Weekly journal entry
-- [ ] Create sightings table
-- [ ] Add the sightings entity (test, dev and prod dbs)
-- [ ] Realize that these daos are repetitive. Refactor into a generic dao!
-- [ ] Add update and delete functionality in jsp for user and role
-- [ ] Build the sightings map jsp
-- [ ] Build the sightings update/delete jsp in user account
-- [ ] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
+- [x] Create db on AWS
+- [x] Deploy to AWS for first time
+- [x] Weekly journal entry
+- [x] Create sightings table
+- [x] Add the sightings entity (test, dev and prod dbs)
+- [x] Realize that these daos are repetitive. Refactor into a generic dao!
+- [x] Add update and delete functionality in jsp for user and role
+- [x] Build the sightings map jsp
+- [x] Build the sightings update/delete jsp in user account
+- [x] Prepare for Checkpoint 2: Database designed and created, at least one DAO implemented with Hibernate, DAO is unit tested, Log4J is implemented (no System.out.printlns), class design and any other diagrams you plan to use have been created. 
 
 
 ### Week 7
 
-- [ ] Weekly journal entry
-- [ ] Set up authentication locally
-- [ ] Set up authentication on AWS
-- [ ] Add Sightings Table, populate with data (test, dev and prod dbs)
-- [ ] Create Sightings entities
-- [ ] Review and incorporate any feedback from Checkpoint 2.
+- [x] Weekly journal entry
+- [x] Set up authentication locally
+- [x] Set up authentication on AWS
+- [x] Add Sightings Table, populate with data (test, dev and prod dbs)
+- [x] Create Sightings entities
+- [x] Review and incorporate any feedback from Checkpoint 2.
 
 
 ### Week 8
 
-- [ ] Weekly journal entry
-- [ ] Integration with OpenLayers mapping API
-- [ ] Create sightings table (test, dev and prod dbs)
-- [ ] Add the sightings entity
-- [ ] Create the sightings dao
-- [ ] Create the sightings dao unit tests
+- [x] Weekly journal entry
+- [x] Integration with OpenLayers mapping API
+- [x] Create sightings table (test, dev and prod dbs)
+- [x] Add the sightings entity
+- [x] Create the sightings dao
+- [x] Create the sightings dao unit tests
 - [ ] Build the sightings crud jsps
-- [ ] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
+- [x] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
 
 ### Week 9
 - [ ] Weekly journal entry
