@@ -10,9 +10,12 @@
             <form action="${pageContext.request.contextPath}/InputSighting" method="post">
                 <div class="form-group">
                     <label for="locationInput">Location</label>
-                    <div id="locationInputCurrent">Current Location</div>
+                    <br>
+                    <i>Get Current Location or manually enter Location</i>
+                    <div id="locationInputCurrent">Get Location</div>
                     <p id="status"></p>
-                    <input type="text" id="locationLongitude" name="longitude">
+                    <input type="text" id="locationLatitude" placeholder="latitude" name="latitude">
+                    <input type="text" id="locationLongitude" placeholder="longitude" name="longitude">
 
                     <input type="text" class="form-control" id="locationInput" name="location" placeholder="Enter location manually"/>
 

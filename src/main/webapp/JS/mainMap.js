@@ -1,26 +1,33 @@
 let iconFeatureArray = [];
-
 sightingsObject.forEach(obj => {
     let iconFeature = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([obj.latitude, obj.longitude]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([obj.longitude, obj.latitude]))
     });
+    let customColor;
 
-    console.log(iconFeature, 'iconFeature');
-
+    if (obj.species === 'ruby-throated') {
+        customColor = 'Crimson';
+    } else if (obj.species === 'rufous') {
+        customColor = 'GoldenRod';
+    } else if (obj.species === 'green violetear') {
+        customColor = 'LimeGreen';
+    } else {
+        customColor = 'MediumBlue';
+    }
+    console.log(customColor)
     let iconStyle = new ol.style.Style({
         image: new ol.style.Circle({
             radius: 6,
             stroke: new ol.style.Stroke({
                 color: 'white',
-                width: 3
+                width: 1
             }),
             fill: new ol.style.Fill({
-                color: 'Crimson'
+                color: customColor
             })
         })
     });
 
-    console.log(iconStyle, 'iconStyle');
     iconFeature.setStyle(iconStyle);
     iconFeatureArray.push(iconFeature);
 });
@@ -34,7 +41,7 @@ let vectorLayer = new ol.layer.Vector({
 });
 
 const map = new ol.Map({
-    target: 'map',
+    target: mapId,
     layers: [
         new ol.layer.Tile({
             source: new ol.source.OSM()
@@ -47,4 +54,4 @@ const map = new ol.Map({
     })
 });
 
-console.log('map', map, 'vectorLayer', vectorLayer, 'vectorSource', vectorSource, 'iconFeatureArray', iconFeatureArray);
+console.log("map", map);

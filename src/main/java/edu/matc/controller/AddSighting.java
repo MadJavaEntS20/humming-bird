@@ -38,12 +38,12 @@ public class AddSighting extends HttpServlet {
         String longitudeParameter = request.getParameter("longitude");
         String locationParameter = request.getParameter("location");
 
-        if (locationParameter.isEmpty() && longitudeParameter != null && !longitudeParameter.isEmpty() && latitudeParameter != null && !latitudeParameter.isEmpty()) {
+        if (longitudeParameter != null && longitudeParameter.length() > 1 && latitudeParameter != null && latitudeParameter.length() > 1) {
             // if defined, add these to sightings object, else will need to geocode
             latitude = Float.parseFloat(request.getParameter("latitude"));
             longitude = Float.parseFloat(request.getParameter("longitude"));
 
-        } else if (!locationParameter.isEmpty()) {
+        } else if (locationParameter != null) {
             // OpenCage API to get lat and long from passed location string
             OpenCageDao openCageDao = new OpenCageDao();
 
@@ -51,12 +51,11 @@ public class AddSighting extends HttpServlet {
                     .getResponseDataWithParam(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()))
                     .getResults())
             {
-                longitude = (float) item.getGeometry().getLat();
-                latitude = (float) item.getGeometry().getLng();
-                logger.info(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()));
-                logger.info(latitude + ", " + longitude);
+                longitude = (float) item.getGeometry().getLng();
+                latitude = (float) item.getGeometry().getLat();
+//                logger.info(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()));
+//                logger.info(latitude + ", " + longitude);
             }
-
         }
 
         String dateTimeParameter = request.getParameter("dateTime");
@@ -67,14 +66,13 @@ public class AddSighting extends HttpServlet {
 
         Date date = Timestamp.valueOf(dateTimeParameter.replace("T"," "));
 
-
         String species = request.getParameter("species");
         User newUser;
-
         // get the new user from session?
         if (request.getRemoteUser() != null) {
             newUser = (User) daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
         } else {
+            // output some sort of error message instead
             newUser = new User("test", "test");
         }
 
@@ -86,14 +84,11 @@ public class AddSighting extends HttpServlet {
 
         if (recordInserted > 0) {
             addMessage = "success";
-            // success
         } else {
             addMessage = "failure";
-            // failure
         }
         session.setAttribute("userAddMessage", addMessage);
 
         response.sendRedirect("sightingAdd");
-
     }
 }

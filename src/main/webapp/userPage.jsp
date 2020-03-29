@@ -9,26 +9,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5">Results</h1>
+            <h1 class="mt-5">Sightings</h1>
             <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th scope="col">Username</th>
-                    <th scope="col" colspan="4">Sighting</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>species</td>
-                    <td>longitude</td>
-                    <td>latitude</td>
-                    <td>date time</td>
+                    <th scope="col">Species</th>
+                    <th scope="col">Longitude</th>
+                    <th scope="col">Latitude</th>
+                    <th scope="col">Date</th>
                 </tr>
                 </thead>
                 <tbody>
-                    <td>${user.userName}</td>
                     <c:forEach var="sighting" items="${user.sighting}" varStatus="loop">
                             <tr>
-                                <td></td>
                                 <td>${sighting.species}</td>
                                 <td>${sighting.longitude}</td>
                                 <td>${sighting.latitude}</td>
@@ -37,9 +30,15 @@
                     </c:forEach>
                 </tbody>
             </table>
+            <div id="userMap" class="userMap"></div>
+            <script type="text/javascript">
+                let sightingsObject = ${sightings};
+                let mapId = document.querySelector('.userMap').id;
+            </script>
         </div>
     </div>
 </div>
+<script src="JS/mainMap.js"></script>
 <%@include file="footer.jsp"%>
 
 

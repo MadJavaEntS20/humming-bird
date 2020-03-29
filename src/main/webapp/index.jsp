@@ -18,7 +18,7 @@
 
             <script type="text/javascript">
                 let sightingsObject = ${sightings};
-                console.log(sightingsObject);
+                let mapId = document.querySelector('.map').id;
             </script>
         </div>
     </div>

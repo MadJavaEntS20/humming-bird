@@ -27,6 +27,7 @@ public class SingleUser extends HttpServlet {
         GenericDao<User> dao = new GenericDao<>(User.class);
         if (req.getRemoteUser() !=  null) {
             req.setAttribute("user", dao.getByPropertyLike("userName", req.getRemoteUser()).get(0));
+            req.setAttribute("sightings", dao.getByPropertyLike("userName", req.getRemoteUser()).get(0).getSighting());
         }
         RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
         dispatcher.forward(req, resp);
