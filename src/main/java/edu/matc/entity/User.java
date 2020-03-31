@@ -52,6 +52,16 @@ public class User {
         this.userPassword = userPassword;
     }
 
+    /**
+     * Add role.
+     *
+     * @param role the role
+     */
+    public void addRole(Role role) {
+        roles.add(role);
+
+    }
+
     public Set<Role> getRoles() {
         return roles;
     }

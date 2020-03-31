@@ -86,7 +86,15 @@ Adding sighting to map now requires login
 Struggled with getting aws to implement login. This was caused by not setting a coule variables in context.xml
 Need to do form validation, logout function, CRUD UI
 
+### Week 10
 
+3/31/20
+
+TODOS:
+* Add tooltips to map, see example: https://openlayers.org/en/latest/examples/kml-earthquakes.html?q=tooltip
+* Format date in tables to look better
+* Show temporal data on map somehow: a slider?
+* Role dao test adding newly created user to role table (already implemented)
 
 
 

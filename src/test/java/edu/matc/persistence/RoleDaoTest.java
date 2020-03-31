@@ -20,14 +20,9 @@ class RoleDaoTest {
      */
     @BeforeEach
     void setUp() {
-
-
         genericDao = new GenericDao(Role.class);
-
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
-
-
     }
 
     /**
@@ -44,6 +39,7 @@ class RoleDaoTest {
      */
     @Test
     void insertSuccess() {
+        // this test should create a new user first, then add to Role table like you do in RegisterUser
         Role newRole = new Role("gmullendore", "user", 3);
         int id = genericDao.insert(newRole);
         assertNotEquals(0,id);

@@ -29,6 +29,8 @@ public class RegisterUser extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
        HttpSession session = request.getSession();
 
+       User newUser = new User();
+
        GenericDao<User>  genericDao = new GenericDao<>(User.class);
        GenericDao<Role> genericDaoRole = new GenericDao<>(Role.class);
 
@@ -39,18 +41,23 @@ public class RegisterUser extends HttpServlet {
 //       MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
 //       try {
 //           credentialHandler.setAlgorithm("sha-256");
-//       } catch (NoSuchAlgorithmException e) {
-//           logger.error(e );
-//       }
-//
+//       } catch (NoSuchAlgorithmException e) { logger.error(e ); }
 //       credentialHandler.setEncoding("UTF-8");
 //       String hashedPassword = credentialHandler.mutate(password);
 
-       User newUser = new User(userName, password);
-       Role newRole = new Role(newUser.getUserName(), "user", newUser.getId());
+        newUser.setUserName(userName);
+        newUser.setUserPassword(password);
 
        int recordInserted = genericDao.insert(newUser);
-       int recordInsertedRole = genericDaoRole.insert(newRole);
+
+        Role newRole = new Role();
+
+        newRole.setUserName(newUser.getUserName());
+        newRole.setUserRole("user");
+        newRole.setUserId(newUser.getId());
+
+        int recordInsertedRole = genericDaoRole.insert(newRole);
+
 
        String addMessage;
 

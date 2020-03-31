@@ -97,8 +97,8 @@ class SightingDaoTest {
      */
     @Test
     void getByPropertyEqualSuccess() {
-        List<Sighting> sighting = genericDao.getByPropertyEqual("species", "ruby-throated");
-        assertEquals(3, sighting.size());
+        List<Sighting> sighting = genericDao.getByPropertyEqual("species", "rufous");
+        assertEquals(1, sighting.size());
         assertEquals(1, sighting.get(0).getId());
     }
 
@@ -108,7 +108,7 @@ class SightingDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<Sighting> sighting = genericDao.getByPropertyLike("species", "ruby");
-        assertEquals(3, sighting.size());
+        assertEquals(0, sighting.size());
     }
 
 }

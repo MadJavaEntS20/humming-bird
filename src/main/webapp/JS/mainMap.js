@@ -1,8 +1,10 @@
 let iconFeatureArray = [];
+
 sightingsObject.forEach(obj => {
     let iconFeature = new ol.Feature({
-        geometry: new ol.geom.Point(ol.proj.fromLonLat([obj.longitude, obj.latitude]))
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([obj.latitude, obj.longitude]))
     });
+
     let customColor;
 
     if (obj.species === 'ruby-throated') {
@@ -14,7 +16,6 @@ sightingsObject.forEach(obj => {
     } else {
         customColor = 'MediumBlue';
     }
-    console.log(customColor)
     let iconStyle = new ol.style.Style({
         image: new ol.style.Circle({
             radius: 6,
@@ -27,7 +28,6 @@ sightingsObject.forEach(obj => {
             })
         })
     });
-
     iconFeature.setStyle(iconStyle);
     iconFeatureArray.push(iconFeature);
 });
@@ -46,12 +46,13 @@ const map = new ol.Map({
         new ol.layer.Tile({
             source: new ol.source.OSM()
         })
-        , vectorLayer
     ],
     view: new ol.View({
         center: ol.proj.fromLonLat([-89, 44.60]),
         zoom: 5
     })
 });
+map.addLayer(vectorLayer);
 
-console.log("map", map);
+window.map = map;
+window.vectorLayer = vectorLayer;

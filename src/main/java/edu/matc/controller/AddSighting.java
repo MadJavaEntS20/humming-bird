@@ -40,8 +40,8 @@ public class AddSighting extends HttpServlet {
 
         if (longitudeParameter != null && longitudeParameter.length() > 1 && latitudeParameter != null && latitudeParameter.length() > 1) {
             // if defined, add these to sightings object, else will need to geocode
-            latitude = Float.parseFloat(request.getParameter("latitude"));
-            longitude = Float.parseFloat(request.getParameter("longitude"));
+            longitude = Float.parseFloat(request.getParameter("latitude"));
+            latitude = Float.parseFloat(request.getParameter("longitude"));
 
         } else if (locationParameter != null) {
             // OpenCage API to get lat and long from passed location string
@@ -51,8 +51,8 @@ public class AddSighting extends HttpServlet {
                     .getResponseDataWithParam(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()))
                     .getResults())
             {
-                longitude = (float) item.getGeometry().getLng();
-                latitude = (float) item.getGeometry().getLat();
+                longitude = (float) item.getGeometry().getLat();
+                latitude = (float) item.getGeometry().getLng();
 //                logger.info(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()));
 //                logger.info(latitude + ", " + longitude);
             }
@@ -68,7 +68,6 @@ public class AddSighting extends HttpServlet {
 
         String species = request.getParameter("species");
         User newUser;
-        // get the new user from session?
         if (request.getRemoteUser() != null) {
             newUser = (User) daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
         } else {
