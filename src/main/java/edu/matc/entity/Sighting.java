@@ -1,6 +1,5 @@
 package edu.matc.entity;
 
-import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
@@ -222,4 +221,4 @@ public class Sighting {
     public int hashCode() {
         return Objects.hash(longitude, latitude, species, approved, dateTime);
     }
-}
+    }

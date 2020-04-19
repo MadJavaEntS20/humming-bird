@@ -35,7 +35,6 @@ public class RegisterUser extends HttpServlet {
        GenericDao<Role> genericDaoRole = new GenericDao<>(Role.class);
 
        String userName = request.getParameter("username");
-       // will need to be updated
        String password = request.getParameter("password");
 
 //       MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();

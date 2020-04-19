@@ -6,7 +6,6 @@ import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -39,7 +38,7 @@ class UserDaoTest {
     @Test
     void getAllSuccess() {
         List<User> users = genericDao.getAll();
-        assertEquals(3, users.size());
+        assertEquals(6, users.size());
     }
 
     /**
