@@ -78,12 +78,12 @@
 
 ### Week 8
 - [x] Weekly journal entry
-- [ ] Implement paging of User Sightings results
+- [ ] **Implement paging of User Sightings results**
 - [x] Code review
 
 ### Week 9
 - [x] Weekly journal entry
-- [ ] Add password reset/reminder functionality
+- [ ] **Add password reset/reminder functionality**
 
 ### Week 10
 - [x] Weekly journal entry
