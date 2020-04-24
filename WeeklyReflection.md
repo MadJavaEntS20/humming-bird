@@ -88,13 +88,27 @@ Need to do form validation, logout function, CRUD UI
 
 ### Week 10
 
-3/31/20
+3/31/20 - 0 hours
+
+Group Project Work Week
 
 TODOS:
 * Add tooltips to map, see example: https://openlayers.org/en/latest/examples/kml-earthquakes.html?q=tooltip
 * Format date in tables to look better
 * Show temporal data on map somehow: a slider?
-* Role dao test adding newly created user to role table (already implemented)
+* Role dao test adding newly created user to role table (already implemented
+
+### Week 11
+
+4/7/20 - 0 hours
+
+Group Project Work Week
+
+### Week 12
+
+4/14/20 - 7 hours
+
+Did most TODOs listed above, that includes adding tooltips, showing temporal data with a Play, Pause, and Reset button. I need to format the date better still, but that is already formatted for my map, so I think I can do it the same way for the table of sightings
 
 
 

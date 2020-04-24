@@ -68,33 +68,33 @@
 - [x] Add the sightings entity
 - [x] Create the sightings dao
 - [x] Create the sightings dao unit tests
-- [ ] Build the sightings crud jsps
+- [ ] **Build the sightings crud jsps**
 - [x] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
 
 ### Week 9
-- [ ] Weekly journal entry
-- [ ] Review and incorporate feedback from Checkpoint 3.
-- [ ] Carefully review code for standards and best practices - use a code quality tool? 
+- [x] Weekly journal entry
+- [x] Review and incorporate feedback from Checkpoint 3.
+- [x] Carefully review code for standards and best practices - use a code quality tool? 
 
 ### Week 8
-- [ ] Weekly journal entry
-- [ ] Implement paging of User Sightings results
-- [ ] Code review
+- [x] Weekly journal entry
+- [ ] **Implement paging of User Sightings results**
+- [x] Code review
 
 ### Week 9
-- [ ] Weekly journal entry
-- [ ] Add password reset/reminder functionality
+- [x] Weekly journal entry
+- [ ] **Add password reset/reminder functionality**
 
 ### Week 10
-- [ ] Weekly journal entry
-- [ ] Unit test all api integrations
+- [x] Weekly journal entry
+- [x] Unit test all api integrations
 
 ### Week 11 - Team project work week
-- [ ] Weekly journal entry
+- [x] Weekly journal entry
 
 ### Week 12 - Team project due
-- [ ] Weekly journal entry
-- [ ] Review indie project and create list of todos
+- [x] Weekly journal entry
+- [x] Review indie project and create list of todos
 
 ### Week 13
 - [ ] Weekly journal entry
