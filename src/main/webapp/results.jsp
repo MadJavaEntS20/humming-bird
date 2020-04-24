@@ -28,6 +28,13 @@
                     <c:forEach var="user" items="${users}">
                         <tr>
                         <td>${user.userName}</td>
+                        <c:if test="${user.sighting.size() lt 1}">
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </c:if>
                             <c:forEach var="sighting" items="${user.sighting}" varStatus="loop">
                                 <c:if test="${loop.index gt 0}">
                                     <tr>
@@ -35,14 +42,16 @@
                                         <td>${sighting.species}</td>
                                         <td>${sighting.longitude}</td>
                                         <td>${sighting.latitude}</td>
-                                        <td>${sighting.dateTime}</td>
+                                        <td>${sighting.dateTime.getMonth() + 1}/${sighting.dateTime.getDate()}/${sighting.dateTime.getYear() - 100}</td>
+                                        <td><a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/removeSightingResults?id=${sighting.id}">Delete</a></td>
                                     </tr>
                                 </c:if>
                                 <c:if test="${loop.index == 0}">
                                         <td>${sighting.species}</td>
                                         <td>${sighting.longitude}</td>
                                         <td>${sighting.latitude}</td>
-                                        <td>${sighting.dateTime}</td>
+                                        <td>${sighting.dateTime.getMonth() + 1}/${sighting.dateTime.getDate()}/${sighting.dateTime.getYear() - 100}</td>
+                                        <td><a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/removeSightingResults?id=${sighting.id}">Delete</a></td>
                                 </c:if>
                             </c:forEach>
                         </tr>

@@ -30,7 +30,8 @@ public class Sighting {
     @Column(name = "approved")
     private boolean approved;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
+    @JoinColumn(name = "user_id", insertable=false, updatable=false)
     private User user;
 
     @Id

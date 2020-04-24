@@ -1,4 +1,5 @@
 let iconFeatureArray = [];
+console.log(sightingsObject);
 
 sightingsObject.forEach(obj => {
     let iconFeature = new ol.Feature({
@@ -73,7 +74,7 @@ info.tooltip({
 
 let displayFeatureInfo = function(pixel) {
     info.css({
-        left: pixel[0] + 'px',
+        left: (pixel[0] + 35) + 'px',
         top: (pixel[1] - 10) + 'px'
     });
     let feature = map.forEachFeatureAtPixel(pixel, function(feature) {
@@ -116,8 +117,8 @@ const frameRate = 0.5;
 let animationId = null;
 
 function sixMonthsAgo() {
-    let sixMos = new Date()
-    sixMos.setMonth(sixMos.getMonth() - 2)
+    let sixMos = new Date();
+    sixMos.setMonth(sixMos.getMonth() - 2);
     return sixMos.toISOString().slice(0, 19).replace('T', ' ') + ".0";
 }
 
@@ -138,6 +139,7 @@ function updateFeatures(date) {
 }
 
 function updateFeatureStyle(feature) {
+    let customColor;
     if (feature.get('attributes').species === 'ruby-throated') {
         customColor = 'Crimson';
     } else if (feature.get('attributes').species === 'rufous') {
@@ -163,7 +165,7 @@ function updateFeatureStyle(feature) {
 
 function setTime() {
     let date = new Date(startDate).setDate(new Date(startDate).getDate() + 1);
-    newDate = new Date(date)
+    let newDate = new Date(date);
     if (newDate > new Date().setMonth(new Date().getMonth() + 5)) {
         stop();
     }
@@ -182,7 +184,7 @@ let stop = function() {
 let play = () => {
     setTime();
     stop();
-    animationId = window.setInterval(setTime, 100 / frameRate);
+    animationId = window.setInterval(setTime, 150 / frameRate);
 };
 
 let reset = () => {
@@ -193,13 +195,16 @@ let reset = () => {
     });
 }
 
+
 let startButton = document.getElementById('play');
-startButton.addEventListener('click', play, false);
+if (startButton) {
+    startButton.addEventListener('click', play, false);
 
-let stopButton = document.getElementById('pause');
-stopButton.addEventListener('click', stop, false);
+    let stopButton = document.getElementById('pause');
+    stopButton.addEventListener('click', stop, false);
 
-let resetButton = document.getElementById('reset');
-resetButton.addEventListener('click', reset, false);
+    let resetButton = document.getElementById('reset');
+    resetButton.addEventListener('click', reset, false);
 
-updateInfo();
+    updateInfo();
+}

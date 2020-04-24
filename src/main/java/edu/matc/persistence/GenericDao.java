@@ -32,7 +32,7 @@ public class GenericDao<T> {
         CriteriaQuery<T> query = builder.createQuery(type);
         Root<T> root = query.from(type );
         List<T> list = session.createQuery( query ).getResultList();
-        logger.debug("The list of entities " + list);
+//        logger.debug("The list of entities " + list);
         session.close();
         return list;
     }
@@ -94,7 +94,7 @@ public class GenericDao<T> {
     public List<T> getByPropertyEqual(String propertyName, String value) {
         Session session = getSession();
 
-        logger.debug("Searching for entity with " + propertyName + " = " + value);
+//        logger.debug("Searching for entity with " + propertyName + " = " + value);
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery( type );
@@ -112,7 +112,7 @@ public class GenericDao<T> {
     public List<T> getByPropertyLike(String propertyName, String value) {
         Session session = getSession();
 
-        logger.debug("Searching for user with {} = {}",  propertyName, value);
+//        logger.debug("Searching for user with {} = {}",  propertyName, value);
 
         CriteriaBuilder builder = session.getCriteriaBuilder();
         CriteriaQuery<T> query = builder.createQuery(type);

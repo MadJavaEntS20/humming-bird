@@ -20,17 +20,20 @@
                 </tr>
                 </thead>
                 <tbody>
-                    <c:forEach var="sighting" items="${user.sighting}" varStatus="loop">
+                    <c:forEach var="sighting" items="${sightings}" varStatus="loop">
                             <tr>
                                 <td>${sighting.species}</td>
                                 <td>${sighting.longitude}</td>
                                 <td>${sighting.latitude}</td>
-                                <td>${sighting.dateTime}</td>
+                                <td>${sighting.dateTime.getMonth() + 1}/${sighting.dateTime.getDate()}/${sighting.dateTime.getYear() - 100}</td>
+                                <td><a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/removeSighting?id=${sighting.id}">Delete</a></td>
                             </tr>
                     </c:forEach>
                 </tbody>
             </table>
             <div id="userMap" class="userMap"></div>
+            <span id="info"></span>
+
             <script type="text/javascript">
                 let sightingsObject = ${sightings};
                 let mapId = document.querySelector('.userMap').id;

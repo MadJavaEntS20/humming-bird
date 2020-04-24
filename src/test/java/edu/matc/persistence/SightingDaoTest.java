@@ -38,7 +38,7 @@ class SightingDaoTest {
     @Test
     void getAllSuccess() {
         List<Sighting> sightings = genericDao.getAll();
-        assertEquals(3, sightings.size());
+        assertEquals(6, sightings.size());
     }
 
 
@@ -58,18 +58,21 @@ class SightingDaoTest {
     void insertSuccess() throws ParseException {
         User newUser = new User("gmullendore", "password3");
 
+
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         Date javaDate = sdf.parse("06/10/2019 18:29:09");
+        int idNewUserInsert = genericDaoUser.insert(newUser);
+        assertNotEquals(0, idNewUserInsert);
 
         Sighting newSighting = new Sighting(newUser, .30f, -12.03f, "ruby-throated", new java.sql.Timestamp (javaDate.getTime()), true );
         int id = genericDao.insert(newSighting);
         assertNotEquals(0,id);
-        Sighting insertedSighting = (Sighting) genericDao.getById(id);
+        Sighting insertedSighting = genericDao.getById(id);
         assertEquals(insertedSighting.getDateTime(), newSighting.getDateTime());
     }
 
     /**
-     * Verify successful delete of user
+     * Verify successful delete of sighting and its user
      */
     @Test
     void deleteSuccess() {
@@ -79,7 +82,6 @@ class SightingDaoTest {
         genericDao.delete(deletedSighting);
         assertNull(genericDao.getById(3));
         assertNotNull(deletedSightingUser);
-
     }
 
 
@@ -99,7 +101,7 @@ class SightingDaoTest {
     void getByPropertyEqualSuccess() {
         List<Sighting> sighting = genericDao.getByPropertyEqual("species", "rufous");
         assertEquals(1, sighting.size());
-        assertEquals(1, sighting.get(0).getId());
+        assertEquals(4, sighting.get(0).getId());
     }
 
     /**
@@ -108,7 +110,7 @@ class SightingDaoTest {
     @Test
     void getByPropertyLikeSuccess() {
         List<Sighting> sighting = genericDao.getByPropertyLike("species", "ruby");
-        assertEquals(0, sighting.size());
+        assertEquals(2, sighting.size());
     }
 
 }

@@ -1,6 +1,7 @@
 package edu.matc.persistence;
 
 import edu.matc.entity.Role;
+import edu.matc.entity.User;
 import edu.matc.test.util.Database;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RoleDaoTest {
 
     GenericDao genericDao;
+    GenericDao userDao;
 
     /**
      * Run set up tasks before each test:
@@ -21,6 +23,8 @@ class RoleDaoTest {
     @BeforeEach
     void setUp() {
         genericDao = new GenericDao(Role.class);
+        userDao = new GenericDao(User.class);
+
         Database database = Database.getInstance();
         database.runSQL("cleandb.sql");
     }
@@ -39,12 +43,18 @@ class RoleDaoTest {
      */
     @Test
     void insertSuccess() {
-        // this test should create a new user first, then add to Role table like you do in RegisterUser
-        Role newRole = new Role("gmullendore", "user", 3);
-        int id = genericDao.insert(newRole);
-        assertNotEquals(0,id);
-        Role insertedRole = (Role) genericDao.getById(id);
-        assertTrue(newRole.equals(insertedRole));
+        User newUser = new User();
+        newUser.setUserName("testUser");
+        newUser.setUserPassword("testPass");
+        userDao.insert(newUser);
+
+        Role newRole = new Role();
+        newRole.setUserName(newUser.getUserName());
+        newRole.setUserRole("user");
+        newRole.setUserId(newUser.getId());
+        genericDao.insert(newRole);
+
+        assertEquals(newUser.getUserName(), newRole.getUserName());
     }
 
     @Test

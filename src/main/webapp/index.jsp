@@ -11,7 +11,7 @@
             <h3>${userAddMessage}</h3>
             <c:remove var="userAddMessage"/>
             <a href="addSighting.jsp">Add Sighting</a>
-            <div id="map" class="map"><div id="info"></div></div>
+            <div id="map" class="map"></div>
             <div id="time"></div>
             <div role="group" aria-label="Animation controls">
                 <button id="play" type="button">Play</button>

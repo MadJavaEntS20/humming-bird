@@ -90,7 +90,7 @@ public class Database implements PropertiesLoader {
                 if (sql == null) {
                     break;
                 }
-                logger.info(sql + "Database.java");
+//                logger.info(sql + "Database.java");
                 stmt.executeUpdate(sql);
 
             }

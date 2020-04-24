@@ -3,6 +3,7 @@ package edu.matc.controller;
 import edu.matc.entity.Role;
 import edu.matc.entity.User;
 import edu.matc.persistence.GenericDao;
+import org.apache.catalina.realm.MessageDigestCredentialHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -12,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.security.NoSuchAlgorithmException;
 
 /**
  * A simple servlet to welcome the user.
@@ -37,12 +39,13 @@ public class RegisterUser extends HttpServlet {
        String userName = request.getParameter("username");
        String password = request.getParameter("password");
 
-//       MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
-//       try {
-//           credentialHandler.setAlgorithm("sha-256");
-//       } catch (NoSuchAlgorithmException e) { logger.error(e ); }
-//       credentialHandler.setEncoding("UTF-8");
-//       String hashedPassword = credentialHandler.mutate(password);
+       MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
+       try {
+           credentialHandler.setAlgorithm("sha-256");
+       } catch (NoSuchAlgorithmException e) { logger.error(e ); }
+       credentialHandler.setEncoding("UTF-8");
+       String hashedPassword = credentialHandler.mutate(password);
+       logger.info(hashedPassword);
 
         newUser.setUserName(userName);
         newUser.setUserPassword(password);
