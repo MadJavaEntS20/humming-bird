@@ -67,12 +67,12 @@ public class AddSighting extends HttpServlet {
         Date date = Timestamp.valueOf(dateTimeParameter.replace("T"," "));
 
         String species = request.getParameter("species");
-        User newUser;
+        User newUser = null;
         if (request.getRemoteUser() != null) {
-            newUser = (User) daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
-        } else {
-            // output some sort of error message instead
-            newUser = new User("test", "test");
+            newUser = daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
+        }
+        if (newUser == null) {
+
         }
 
         Sighting newSighting = new Sighting(newUser, longitude, latitude, species, date, true);

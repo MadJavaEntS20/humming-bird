@@ -22,8 +22,6 @@ public class GetAllSightings extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GenericDao<Sighting> dao = new GenericDao<>(Sighting.class);
         request.setAttribute("sightings", dao.getAll());
-//        logger.info("GetAllSightings");
-//        logger.info(request.getAttribute("sightings"));
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
     }

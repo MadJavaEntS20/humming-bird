@@ -9,14 +9,16 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
+
             <h1 class="mt-5">Sightings</h1>
-            <table class="table table-striped">
+            <table id="userTable" class="table table-striped">
                 <thead>
                 <tr>
                     <th scope="col">Species</th>
                     <th scope="col">Longitude</th>
                     <th scope="col">Latitude</th>
                     <th scope="col">Date</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -35,6 +37,10 @@
             <span id="info"></span>
 
             <script type="text/javascript">
+                    $(document).ready(function () {
+                        $('#userTable').DataTable();
+                        $('.dataTables_length').addClass('bs-select');
+                    });
                 let sightingsObject = ${sightings};
                 let mapId = document.querySelector('.userMap').id;
             </script>

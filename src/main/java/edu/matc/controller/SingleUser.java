@@ -39,19 +39,9 @@ public class SingleUser extends HttpServlet {
             req.setAttribute("user", currentUser);
             req.setAttribute("sightings", currentUser.getSighting());
 
-//            Set<Sighting> singleUserSightings = currentUser.getSighting();
-//            List<Integer> idOfSighting = new ArrayList<>();
-//            for (Sighting s : singleUserSightings) {
-//                idOfSighting.add(s.getId());
-//            }
-//            Set<Sighting> retrievedSightings = new HashSet<>();
-//            for (Integer id : idOfSighting) {
-//                retrievedSightings.add(sightingDao.getById(id));
-//            }
-//
-//            req.setAttribute("sightings", retrievedSightings);
+            logger.info(req.getAttribute("sightings"));
+            RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
+            dispatcher.forward(req, resp);
         }
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/userPage.jsp");
-        dispatcher.forward(req, resp);
     }
 }

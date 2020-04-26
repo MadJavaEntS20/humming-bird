@@ -1,6 +1,5 @@
 package edu.matc.controller;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,9 +15,10 @@ import java.io.IOException;
 
 public class AddSightingServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String url = "/Sightings";
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
-        dispatcher.forward(request, response);
+        String url = "/fluttr/Sightings";
+        response.sendRedirect(url);
+//        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(url);
+//        dispatcher.forward(request, response);
     }
 
 }

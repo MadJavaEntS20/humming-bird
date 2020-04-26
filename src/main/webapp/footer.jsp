@@ -1,6 +1,6 @@
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.slim.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
+<footer>
+    <div class="footer-copyright text-center py-3">&#9400;2020 Fluttr
+    </div>
+</footer>
 </body>
 </html>

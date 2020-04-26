@@ -74,8 +74,8 @@ info.tooltip({
 
 let displayFeatureInfo = function(pixel) {
     info.css({
-        left: (pixel[0] + 35) + 'px',
-        top: (pixel[1] - 10) + 'px'
+        left: (pixel[0] + 55) + 'px',
+        top: (pixel[1] - 5) + 'px'
     });
     let feature = map.forEachFeatureAtPixel(pixel, function(feature) {
         return feature;

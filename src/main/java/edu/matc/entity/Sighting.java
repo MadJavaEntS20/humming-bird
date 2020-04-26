@@ -22,16 +22,13 @@ public class Sighting {
     @Column(name = "species")
     private String species;
 
-//    @CreationTimestamp
-//    @Temporal(TemporalType.DATE)
     @Column(name = "date_time")
-    private Date dateTime; // localDate data type?
+    private Date dateTime;
 
     @Column(name = "approved")
     private boolean approved;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", insertable=false, updatable=false)
     private User user;
 
     @Id
