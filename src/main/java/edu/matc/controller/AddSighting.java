@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
@@ -21,7 +22,7 @@ import java.util.Date;
 
 @WebServlet (
         name = "inputSighting",
-        urlPatterns = ( "/InputSighting")
+        urlPatterns = ( "/inputSighting")
 )
 public class AddSighting extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
@@ -31,6 +32,46 @@ public class AddSighting extends HttpServlet {
         GenericDao<Sighting> dao = new GenericDao<>(Sighting.class);
         GenericDao<User> daoUser =  new GenericDao<>(User.class);
 
+        User newUser = null;
+        if (request.getRemoteUser() != null) {
+            newUser = daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
+        }
+        if (newUser == null) {
+
+        }
+
+        float longitude = getCoords(request)[0];
+        float latitude = getCoords(request)[1];
+        String species = request.getParameter("species");
+        Date date = getDate(request);
+
+        Sighting newSighting = new Sighting(newUser, longitude, latitude, species, date, true);
+        logger.info("new Sighting to be added: " + newSighting);
+
+        int recordInserted = dao.insert(newSighting);
+
+        String addMessage;
+
+        if (recordInserted > 0) {
+            addMessage = "Sighting Added Successfully!";
+        } else {
+            addMessage = "Error in Adding Sighting";
+        }
+        session.setAttribute("userAddMessage", addMessage);
+
+        response.sendRedirect("sightingAdd");
+    }
+
+    public static Date getDate(HttpServletRequest request) {
+        String dateTimeParameter = request.getParameter("dateTime");
+        // make sure the seconds are set before parsing
+        if (dateTimeParameter.contains(":")) {
+            dateTimeParameter += ":00";
+        }
+        return Timestamp.valueOf(dateTimeParameter.replace("T"," "));
+    }
+
+    public static float[] getCoords(HttpServletRequest request) throws UnsupportedEncodingException {
         float latitude = 0;
         float longitude = 0;
 
@@ -57,37 +98,6 @@ public class AddSighting extends HttpServlet {
 //                logger.info(latitude + ", " + longitude);
             }
         }
-
-        String dateTimeParameter = request.getParameter("dateTime");
-        // make sure the seconds are set before parsing
-        if (dateTimeParameter.contains(":")) {
-            dateTimeParameter += ":00";
-        }
-
-        Date date = Timestamp.valueOf(dateTimeParameter.replace("T"," "));
-
-        String species = request.getParameter("species");
-        User newUser = null;
-        if (request.getRemoteUser() != null) {
-            newUser = daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
-        }
-        if (newUser == null) {
-
-        }
-
-        Sighting newSighting = new Sighting(newUser, longitude, latitude, species, date, true);
-
-        int recordInserted = dao.insert(newSighting);
-
-        String addMessage;
-
-        if (recordInserted > 0) {
-            addMessage = "success";
-        } else {
-            addMessage = "failure";
-        }
-        session.setAttribute("userAddMessage", addMessage);
-
-        response.sendRedirect("sightingAdd");
+        return new float[]{longitude, latitude};
     }
 }

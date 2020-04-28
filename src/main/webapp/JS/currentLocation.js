@@ -9,11 +9,13 @@ function geoFindMe() {
         const latitude  = position.coords.latitude;
         const longitude = position.coords.longitude;
         status.textContent = '';
+        console.log(latitude, longitude);
         locationInputElementLatitude.value = `${latitude}`;
         locationInputElementLongitude.value = `${longitude}`;
     }
 
     function error() {
+        console.warn(`ERROR(${err.code}): ${err.message}`);
         status.textContent = 'Unable to retrieve your location';
     }
 

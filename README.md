@@ -30,7 +30,7 @@ collective sightings will be created to illustrate the journey of the hummingbir
 * Dependency Management
   * Maven
 * CSS 
-  * PureCSS.io
+  * BootStrap 4
 * Data Validation
   * Bootstrap Validator for front end
   * Explore Hibernate's validation

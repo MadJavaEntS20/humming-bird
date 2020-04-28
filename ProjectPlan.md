@@ -78,7 +78,7 @@
 
 ### Week 8
 - [x] Weekly journal entry
-- [ ] **Implement paging of User Sightings results**
+- [X] Implement paging of User Sightings results
 - [x] Code review
 
 ### Week 9

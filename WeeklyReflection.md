@@ -110,6 +110,10 @@ Group Project Work Week
 
 Did most TODOs listed above, that includes adding tooltips, showing temporal data with a Play, Pause, and Reset button. I need to format the date better still, but that is already formatted for my map, so I think I can do it the same way for the table of sightings
 
+### Week 13
+ 4/21/20 - 9 hours
+ 
+ Lots of CSS updates and ability to delete sighting from both admin page and user page
 
 
 

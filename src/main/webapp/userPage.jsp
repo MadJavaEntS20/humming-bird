@@ -19,6 +19,7 @@
                     <th scope="col">Latitude</th>
                     <th scope="col">Date</th>
                     <th></th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -28,6 +29,7 @@
                                 <td>${sighting.longitude}</td>
                                 <td>${sighting.latitude}</td>
                                 <td>${sighting.dateTime.getMonth() + 1}/${sighting.dateTime.getDate()}/${sighting.dateTime.getYear() - 100}</td>
+                                <td><a class="btn btn-primary" href="${pageContext.request.contextPath}/updateSighting?id=${sighting.id}">Edit</a></td>
                                 <td><a class="btn btn-outline-danger" href="${pageContext.request.contextPath}/removeSighting?id=${sighting.id}">Delete</a></td>
                             </tr>
                     </c:forEach>
