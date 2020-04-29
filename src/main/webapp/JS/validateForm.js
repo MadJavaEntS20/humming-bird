@@ -17,23 +17,4 @@
     }, false);
 })();
 
-// function toggleLocationInputs() {
-//     const locationInputElementLatitude = document.querySelector('#locationLatitude');
-//     const locationInputElementLongitude = document.querySelector('#locationLongitude');
-//     const manualInputElement = document.querySelector('#locationInput');
-//
-//     manualInputElement.addEventListener('keyup', () => {
-//         if (locationInputElementLatitude.value.length > 0 || locationInputElementLongitude.value.length > 0) {
-//             locationInputElementLatitude.value = null;
-//             locationInputElementLongitude.value = null;
-//         }
-//     })
-//
-//     document.querySelector('#locationInputCurrent').addEventListener('click', () => {
-//         if (manualInputElement.value.length > 0) {
-//             manualInputElement.value = null;
-//         }
-//     })
-//
-//
-// }
+

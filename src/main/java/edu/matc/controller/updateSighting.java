@@ -12,8 +12,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Date;
 
 import static edu.matc.controller.AddSighting.getCoords;
@@ -28,8 +28,19 @@ public class updateSighting extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao<Sighting> sightingDao = new GenericDao<>(Sighting.class);
     private GenericDao<User> userDao = new GenericDao<>(User.class);
+    private String redirectUrl;
+    private Boolean fromSingleUser;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        URL baseUrl = new URL(request.getHeader("referer"));
+        redirectUrl = baseUrl.getPath();
+        fromSingleUser = true;
+        if (redirectUrl.equals("/fluttr/searchUser")) {
+            redirectUrl += "?" + baseUrl.getQuery();
+            fromSingleUser = false;
+        }
+//        logger.info("doGet previousPath " + redirectUrl);
+
         sightingDao = new GenericDao<>(Sighting.class);
         int idOfSighting = Integer.parseInt(request.getParameter("id"));
         Sighting sighting = sightingDao.getById(idOfSighting);
@@ -40,12 +51,11 @@ public class updateSighting extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        HttpSession session = request.getSession();
+
         int id = Integer.parseInt(request.getParameter("id"));
         Sighting updatedSighting = sightingDao.getById(id);
         Date date = getDate(request);
 
-        updatedSighting.setUser(userDao.getByPropertyEqual("userName", request.getRemoteUser()).get(0));
         updatedSighting.setDateTime(date);
 
         float longitude = getCoords(request)[0];
@@ -54,12 +64,18 @@ public class updateSighting extends HttpServlet {
         updatedSighting.setLatitude(latitude);
         updatedSighting.setLongitude(longitude);
         updatedSighting.setSpecies(request.getParameter("species"));
+//        logger.info("updatedSighting" + updatedSighting);
 
-        if (updatedSighting.getUser().getUserName().equals(request.getRemoteUser()))  {
-            sightingDao.saveOrUpdate(updatedSighting);
-            response.sendRedirect("singleUser");
+        if (fromSingleUser) {
+            if (updatedSighting.getUser().getUserName().equals(request.getRemoteUser()))  {
+                sightingDao.saveOrUpdate(updatedSighting);
+                response.sendRedirect(redirectUrl.replace("/fluttr/", ""));
+            } else {
+                request.getRequestDispatcher("/addSighting.jsp").forward(request, response);
+            }
         } else {
-            request.getRequestDispatcher("/addSighting.jsp").forward(request, response);
+            sightingDao.saveOrUpdate(updatedSighting);
+            response.sendRedirect(redirectUrl.replace("/fluttr/", ""));
         }
     }
 }

@@ -8,13 +8,13 @@
         <div class="col-lg-6.1 text-left">
             <c:choose>
                 <c:when test ="${sightingToUpdate ne null}">
-                    <p class="h4 mb-4 text-center">Update Sighting</p>
+                    <p class="h4 my-4 text-center">Update Sighting</p>
                     <form id="addSightingForm" action="${pageContext.request.contextPath}/updateSighting" class="needs-validation my-4" method="post" novalidate>
                         <input type="hidden" name="id" value="${sightingToUpdate.id}">
                 </c:when>
                 <c:otherwise>
                     <form id="addSightingForm" action="${pageContext.request.contextPath}/inputSighting" class="needs-validation my-4" method="post" novalidate>
-                        <p class="h4 mb-4 text-center">Add Sighting</p>
+                        <p class="h4 my-4 text-center">Add Sighting</p>
                 </c:otherwise>
             </c:choose>
                 <div class="form-group locationInputOptions">
@@ -64,6 +64,7 @@
 
 
 <script src="JS/validateForm.js"></script>
+<script src="JS/validateSightingLocation.js"></script>
 <script src="JS/currentDate.js"></script>
 <script src="JS/currentLocation.js"></script>
 <%@include file="footer.jsp"%>
