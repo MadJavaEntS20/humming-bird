@@ -1,22 +1,29 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-window.onload(toggleLocationInputs());
-function toggleLocationInputs() {
-    console.log('toggleLocationInputs');
-    const locationInputElementLatitude = document.querySelector('#locationLatitude');
-    const locationInputElementLongitude = document.querySelector('#locationLongitude');
-    const manualInputElement = document.querySelector('#locationInput');
 
-    manualInputElement.addEventListener('keyup', () => {
-        if (locationInputElementLatitude.value.length > 0 || locationInputElementLongitude.value.length > 0) {
-            locationInputElementLatitude.value = '';
-            locationInputElementLongitude.value = '';
+document.querySelectorAll('.location-options').forEach(opt => {
+    opt.addEventListener('click', () => {
+        console.log(document.querySelector(`.${opt.id}`), document.querySelector(`.${opt.id}`).style.display);
+        if (document.querySelector(`.${opt.id}`).style.display === 'block') {
+            document.querySelector(`.${opt.id}`).style.display = 'none';
+        } else {
+            document.querySelector(`.${opt.id}`).style.display = 'block';
         }
-    });
 
-    document.querySelector('#locationInputCurrent').addEventListener('click', () => {
-        if (manualInputElement.value.length > 0) {
-            manualInputElement.value = '';
-        }
+        // if (document.querySelector('.location-current').style.display === 'none') {
+        //     document.querySelector('.location-current').style.display = 'block';
+        //     document.querySelector('.location-manual').style.display = 'none';
+        //
+        // } else {
+        //     document.querySelector('.location-current').style.display = 'none';
+        //     document.querySelector('.location-manual').style.display = 'block';
+        // }
+        //
+        // if (document.querySelector('.location-manual').style.display === 'none') {
+        //     document.querySelector('.location-manual').style.display = 'block';
+        //     document.querySelector('.location-current').style.display = 'none';
+        // } else {
+        //     document.querySelector('.location-current').style.display = 'none';
+        //     document.querySelector('.location-manual').style.display = 'block';
+        //
+        // }
     })
-
-}
+})

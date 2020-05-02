@@ -19,23 +19,23 @@
             </c:choose>
                 <div class="form-group locationInputOptions">
                     <label for="locationInput" class="h6">Location</label>
-                    <i class="active d-block my-2">Get Current Location or Enter Location</i>
-                    <div class="row">
-                        <div class="col flex mr-2">
-                            <button type="button" id="locationInputCurrent" class="btn btn-secondary my-2 px-1">
-                                <svg class="bi bi-cursor-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 01.103.557L8.528 15.467a.5.5 0 01-.917-.007L5.57 10.694.803 8.652a.5.5 0 01-.006-.916l12.728-5.657a.5.5 0 01.556.103z" clip-rule="evenodd"/>
-                                </svg>
-                                Current Location
-                            </button>
+                    <i class="active d-block my-2">
+                        Get
+                        <button type="button" id="location-current" class="location-options btn btn-success my-2 px-1">
+                            <svg class="bi bi-cursor-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M14.082 2.182a.5.5 0 01.103.557L8.528 15.467a.5.5 0 01-.917-.007L5.57 10.694.803 8.652a.5.5 0 01-.006-.916l12.728-5.657a.5.5 0 01.556.103z" clip-rule="evenodd"/>
+                            </svg>
+                            Current Location
+                        </button>
+                        or
+                        <span class="location-options btn btn-success" id="location-manual">Enter Location</span></i>
+                    <div class="row location-inputs">
+                        <div class="col flex mr-2 location-current">
                             <span class="d-block mx-1" id="status"></span>
                             <input type="text" value="${sightingToUpdate ne null ? sightingToUpdate.latitude : ''}" id="locationLatitude"  class="form-control my-2 mx-1" placeholder="latitude" name="latitude">
                             <input type="text" value="${sightingToUpdate ne null ? sightingToUpdate.longitude : ''}" id="locationLongitude" class="form-control my-2 mx-1" placeholder="longitude" name="longitude">
                         </div>
-                        <div class="row flex">
-                            <div class="border border-dark mx-2 mt-1 divider"></div>
-                        </div>
-                        <div class="col align-self-center">
+                        <div class="col align-self-center location-manual">
                             <input type="text" class="form-control my-1 ml-1" id="locationInput" name="location" placeholder="Enter location manually">
                         </div>
                     </div>

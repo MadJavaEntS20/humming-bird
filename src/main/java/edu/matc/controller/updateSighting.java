@@ -1,7 +1,6 @@
 package edu.matc.controller;
 
 import edu.matc.entity.Sighting;
-import edu.matc.entity.User;
 import edu.matc.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,11 +26,12 @@ import static edu.matc.controller.AddSighting.getDate;
 public class updateSighting extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao<Sighting> sightingDao = new GenericDao<>(Sighting.class);
-    private GenericDao<User> userDao = new GenericDao<>(User.class);
     private String redirectUrl;
     private Boolean fromSingleUser;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        // Trying to refactor here and not have duplicate code, depending on the referer value of get header,
+        // do Post will redirect either back to searchUser or singleUser
         URL baseUrl = new URL(request.getHeader("referer"));
         redirectUrl = baseUrl.getPath();
         fromSingleUser = true;

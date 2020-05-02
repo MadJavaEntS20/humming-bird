@@ -23,7 +23,6 @@ public class RemoveSightingResultsServlet extends HttpServlet {
         String previousUrl = request.getHeader("referer");
         URL parsedUrl = new URL(previousUrl);
 //        logger.info("parsedUrl" + parsedUrl + "getFile" + parsedUrl.getFile() + "getPath" + parsedUrl.getPath());
-//        parsedUrl http://localhost:8080/fluttr/searchUser?searchTerm=&submit=viewAll getFile /fluttr/searchUser?searchTerm=&submit=viewAll getPath /fluttr/searchUser vs /fluttr/singleUser
         response.sendRedirect("/fluttr/searchUser?" + parsedUrl.getQuery());;
     }
 }
