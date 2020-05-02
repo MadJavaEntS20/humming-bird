@@ -68,7 +68,7 @@
 - [x] Add the sightings entity
 - [x] Create the sightings dao
 - [x] Create the sightings dao unit tests
-- [ ] **Build the sightings crud jsps**
+- [x] Build the sightings crud jsps
 - [x] Prepare for Checkpoint 3: Deployed to AWS, at least one JSP that displays data from the database is implemented. 
 
 ### Week 9
@@ -83,7 +83,7 @@
 
 ### Week 9
 - [x] Weekly journal entry
-- [ ] **Add password reset/reminder functionality**
+- [ ] **Add password reset/~~reminder~~ functionality**
 
 ### Week 10
 - [x] Weekly journal entry

@@ -114,6 +114,13 @@ Did most TODOs listed above, that includes adding tooltips, showing temporal dat
  4/21/20 - 9 hours
  
  Lots of CSS updates and ability to delete sighting from both admin page and user page
+ 
+ ### Week 14
+ 4/28/20 - 12 hours
+ 
+ Good progress, adding update to both a single users's sighting page as well as the admin's page of all sightings
+ Long list of todos to complete this weekend: 
+validate registration page (password requriements?), improve validation in addSighting page, ability to update password, a the user page would have this button to do so, refactor deleteSighting to re-use code between user and searchUser page, in the map, add a legend, step through buttons, add an about section and some hint this site is about birds (!!!). CSS tweaks including the weird footer and tooltips on the userpage map, and also some "Extra credit feature"..................
 
 
 
