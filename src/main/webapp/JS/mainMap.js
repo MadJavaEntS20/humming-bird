@@ -74,7 +74,10 @@ info.tooltip({
 
 let leftPixelOffset;
 let topPixelOffset;
+
 if (mapId === "userMap") {
+    leftPixelOffset = 55;
+    topPixelOffset = 50;
 
 } else {
     leftPixelOffset = 55;
@@ -92,8 +95,8 @@ let displayFeatureInfo = function(pixel) {
     if (feature) {
         info.tooltip('hide')
             .attr('title', `Species: ${feature.get('attributes').species}
-                Date: ${formatDate(feature.get('attributes').date)}
-                Lat/Lon: ${feature.get('attributes').latitude}, ${feature.get('attributes').longitude}`)
+                  Date: ${formatDate(feature.get('attributes').date)}
+                  Lat/Lon: ${feature.get('attributes').latitude}, ${feature.get('attributes').longitude}`)
             .attr('data-html', true)
             .tooltip('fixTitle')
             .tooltip('show');
@@ -124,7 +127,7 @@ function formatDate(date) {
 let startDate = sixMonthsAgo();
 const frameRate = 0.5;
 let animationId = null;
-
+console.log(startDate);
 function sixMonthsAgo() {
     let sixMos = new Date();
     sixMos.setMonth(sixMos.getMonth() - 2);
@@ -183,6 +186,18 @@ function setTime() {
     updateInfo();
 }
 
+function setTimeBackward() {
+    let date = new Date(startDate).setDate(new Date(startDate).getDate() - 1);
+    let newDate = new Date(date);
+    console.log(newDate)
+    if (newDate < new Date().setMonth(new Date().getMonth())) {
+        stop();
+    }
+    startDate = newDate;
+    updateFeatures(newDate);
+    updateInfo();
+}
+
 let stop = function() {
     if (animationId !== null) {
         window.clearInterval(animationId);
@@ -204,6 +219,16 @@ let reset = () => {
     });
 }
 
+let stepForward = () => {
+    stop();
+    setTime();
+}
+
+let stepBack = () => {
+    stop();
+    setTimeBackward();
+}
+
 
 let startButton = document.getElementById('play');
 if (startButton) {
@@ -214,6 +239,13 @@ if (startButton) {
 
     let resetButton = document.getElementById('reset');
     resetButton.addEventListener('click', reset, false);
+
+    let stepBackButton = document.getElementById('backward');
+    stepBackButton.addEventListener('click', stepBack, false);
+
+    let stepForwardButton = document.getElementById('forward');
+    stepForwardButton.addEventListener('click', stepForward, false);
+
 
     updateInfo();
 }

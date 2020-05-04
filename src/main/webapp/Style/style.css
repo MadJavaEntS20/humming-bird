@@ -56,3 +56,12 @@ footer {
     display: none;
 }
 
+#time {
+    height: 1em;
+}
+
+.time-buttons {
+    display: flex;
+    flex-flow: column;
+}
+
