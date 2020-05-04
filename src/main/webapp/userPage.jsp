@@ -9,8 +9,14 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-
-            <h1 class="mt-5">Sightings</h1>
+            <h1 class="my-5">User Management</h1>
+            <p class="my-0 list-group-item text-left">Username: ${pageContext.request.getRemoteUser()}</p>
+            <a class="list-group-item text-left" href="${pageContext.request.contextPath}/updatePassword?id=${user.id}" >Update Password</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h3 class="mt-5">Sightings</h3>
             <table id="userTable" class="table table-striped">
                 <thead>
                 <tr>

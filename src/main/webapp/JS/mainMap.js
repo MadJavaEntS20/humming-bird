@@ -72,10 +72,19 @@ info.tooltip({
     trigger: 'manual'
 });
 
+let leftPixelOffset;
+let topPixelOffset;
+if (mapId === "userMap") {
+
+} else {
+    leftPixelOffset = 55;
+    topPixelOffset = -5;
+}
+
 let displayFeatureInfo = function(pixel) {
     info.css({
-        left: (pixel[0] + 55) + 'px',
-        top: (pixel[1] - 5) + 'px'
+        left: (pixel[0] + leftPixelOffset) + 'px',
+        top: (pixel[1] + topPixelOffset) + 'px'
     });
     let feature = map.forEachFeatureAtPixel(pixel, function(feature) {
         return feature;

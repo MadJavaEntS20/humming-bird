@@ -20,8 +20,7 @@ public class RemoveSightingResultsServlet extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String previousUrl = request.getHeader("referer");
-        URL parsedUrl = new URL(previousUrl);
+        URL parsedUrl = new URL(request.getHeader("referer"));
 //        logger.info("parsedUrl" + parsedUrl + "getFile" + parsedUrl.getFile() + "getPath" + parsedUrl.getPath());
         response.sendRedirect("/fluttr/searchUser?" + parsedUrl.getQuery());;
     }

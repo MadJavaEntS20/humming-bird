@@ -23,7 +23,7 @@ import static edu.matc.controller.AddSighting.getDate;
         urlPatterns = { "/updateSighting" }
 )
 
-public class updateSighting extends HttpServlet {
+public class UpdateSighting extends HttpServlet {
     private final Logger logger = LogManager.getLogger(this.getClass());
     private GenericDao<Sighting> sightingDao = new GenericDao<>(Sighting.class);
     private String redirectUrl;
@@ -33,18 +33,15 @@ public class updateSighting extends HttpServlet {
         // Trying to refactor here and not have duplicate code, depending on the referer value of get header,
         // do Post will redirect either back to searchUser or singleUser
         URL baseUrl = new URL(request.getHeader("referer"));
-        redirectUrl = baseUrl.getPath();
+        redirectUrl = baseUrl.getPath().replace("/fluttr/", "");;
         fromSingleUser = true;
-        if (redirectUrl.equals("/fluttr/searchUser")) {
+        if (redirectUrl.equals("searchUser")) {
             redirectUrl += "?" + baseUrl.getQuery();
             fromSingleUser = false;
         }
-//        logger.info("doGet previousPath " + redirectUrl);
-
         sightingDao = new GenericDao<>(Sighting.class);
         int idOfSighting = Integer.parseInt(request.getParameter("id"));
         Sighting sighting = sightingDao.getById(idOfSighting);
-//        logger.info("id of sighting: " +  idOfSighting + " sighting: " + sighting.toString());
         request.setAttribute("sightingToUpdate", sighting);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/addSighting.jsp");
         dispatcher.forward(request,response);
@@ -69,13 +66,13 @@ public class updateSighting extends HttpServlet {
         if (fromSingleUser) {
             if (updatedSighting.getUser().getUserName().equals(request.getRemoteUser()))  {
                 sightingDao.saveOrUpdate(updatedSighting);
-                response.sendRedirect(redirectUrl.replace("/fluttr/", ""));
+                response.sendRedirect(redirectUrl);
             } else {
                 request.getRequestDispatcher("/addSighting.jsp").forward(request, response);
             }
         } else {
             sightingDao.saveOrUpdate(updatedSighting);
-            response.sendRedirect(redirectUrl.replace("/fluttr/", ""));
+            response.sendRedirect(redirectUrl);
         }
     }
 }

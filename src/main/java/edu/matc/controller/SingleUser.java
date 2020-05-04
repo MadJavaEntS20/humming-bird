@@ -1,6 +1,5 @@
 package edu.matc.controller;
 
-import edu.matc.entity.Sighting;
 import edu.matc.entity.User;
 import edu.matc.persistence.GenericDao;
 import org.apache.logging.log4j.LogManager;
@@ -30,7 +29,6 @@ public class SingleUser extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         GenericDao<User> dao = new GenericDao<>(User.class);
-        GenericDao<Sighting> sightingDao = new GenericDao<>(Sighting.class);
         if (req.getRemoteUser() !=  null) {
             logger.info(req.getRemoteUser());
             logger.info(dao.getByPropertyEqual("userName", req.getRemoteUser()).toString());
