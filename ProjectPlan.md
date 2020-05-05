@@ -83,7 +83,7 @@
 
 ### Week 9
 - [x] Weekly journal entry
-- [ ] **Add password reset/~~reminder~~ functionality**
+- [x] Add password reset functionality
 
 ### Week 10
 - [x] Weekly journal entry
