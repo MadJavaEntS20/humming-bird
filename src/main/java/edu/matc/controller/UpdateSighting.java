@@ -18,6 +18,9 @@ import java.util.Date;
 import static edu.matc.controller.AddSighting.getCoords;
 import static edu.matc.controller.AddSighting.getDate;
 
+/**
+ * UpdateSighting servlet that will redirect to either the searchUser or singleUser page
+ */
 @WebServlet (
         name = "updateSighting",
         urlPatterns = { "/updateSighting" }
@@ -30,8 +33,7 @@ public class UpdateSighting extends HttpServlet {
     private Boolean fromSingleUser;
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        // Trying to refactor here and not have duplicate code, depending on the referer value of get header,
-        // do Post will redirect either back to searchUser or singleUser
+        // Depending on the referer value of get header, do Post will redirect either back to searchUser or singleUser
         URL baseUrl = new URL(request.getHeader("referer"));
         redirectUrl = baseUrl.getPath().replace("/fluttr/", "");;
         fromSingleUser = true;

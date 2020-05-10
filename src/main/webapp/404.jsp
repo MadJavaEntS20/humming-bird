@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <p class="h4 my-4 text-center">No Hummingbirds to be Found Here!</p>
+            <p class="h4 my-4 text-center">404 Error: No Hummingbirds to be Found Here!</p>
         </div>
     </div>
 </div>

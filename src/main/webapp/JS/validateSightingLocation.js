@@ -1,22 +1,32 @@
 
 document.querySelectorAll('.location-options').forEach(opt => {
     opt.addEventListener('click', () => {
-        console.log(document.querySelector(`.${opt.id}`), document.querySelector(`.${opt.id}`).style.display);
         if (document.querySelector(`.${opt.id}`).style.display === 'block') {
             document.querySelector(`.${opt.id}`).style.display = 'none';
         } else {
             document.querySelector(`.${opt.id}`).style.display = 'block';
         }
-
-        if (document.querySelector(`.${opt.id}`).className === 'location-current'
-            && document.querySelector('.location-manual').style.display === 'block' ) {
-            console.log("document.querySelector('.location-manual').style.display = 'none';");
-            document.querySelector('.location-manual').style.display = 'none';
-        }
-        if (document.querySelector(`.${opt.id}`).className === 'location-manual'
-            && document.querySelector('.location-current').style.display === 'block' ) {
-            console.log("document.querySelector('.location-current').style.display = 'none';");
-            document.querySelector('.location-current').style.display = 'none';
-        }
     })
 });
+
+function validateLocation() {
+    if (document.querySelector('#locationLatitude').value === '' && document.querySelector('#locationInput').value === '') {
+        document.querySelector('.location-tooltip').style.position = 'initial';
+        document.querySelector('.location-tooltip').style.display = 'flex';
+        document.querySelector('.location-tooltip').innerHTML = 'Please get Current Location or Enter Location.';
+        return false;
+    } else {
+        document.querySelector('.location-tooltip').style.display = 'none';
+        return true;
+    }
+}
+
+document.querySelector('#location-current').addEventListener('click', () => {
+    document.querySelector('.location-tooltip').style.display = 'none';
+});
+
+document.querySelector('#locationInput').addEventListener('keyup', () => {
+    document.querySelector('.location-tooltip').style.display = 'none';
+});
+
+

@@ -12,7 +12,7 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 /**
- * A simple servlet to welcome the user.
+ * A simple servlet to search for users
  * @author emullendore
  */
 

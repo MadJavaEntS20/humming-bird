@@ -11,6 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * RemoveSighting servlet
+ * @author emullendore
+ */
 @WebServlet (
         name = "removeSighting",
         urlPatterns = { "/removeSighting" }
@@ -22,9 +26,14 @@ public class RemoveSighting extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         GenericDao<Sighting> dao = new GenericDao<>(Sighting.class);
         int idOfSighting = Integer.parseInt(request.getParameter("id"));
+        String previousPage = request.getParameter("pageName");
         Sighting sighting = dao.getById(idOfSighting);
 //        logger.info("id of sighting: " +  idOfSighting + " sighting: " + sighting.toString());
         dao.delete(sighting);
-        response.sendRedirect("removeSightingServlet");
+        if (previousPage.equals("results")) {
+            response.sendRedirect("removeSightingResultsServlet");
+        } else {
+            response.sendRedirect("removeSightingServlet");
+        }
     }
 }

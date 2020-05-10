@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"edu.matc.controller"},{"l":"edu.matc.entity"},{"l":"edu.matc.opencagedata"},{"l":"edu.matc.persistence"},{"l":"edu.matc.test.util"},{"l":"edu.matc.utilities"}]

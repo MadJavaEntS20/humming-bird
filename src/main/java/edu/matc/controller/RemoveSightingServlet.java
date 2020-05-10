@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Remove Sightings Servlet to redirect to singUser page
+ * @author emullendore
+ */
 @WebServlet (
         name="removeSightingServlet",
             urlPatterns = { "/removeSightingServlet"}

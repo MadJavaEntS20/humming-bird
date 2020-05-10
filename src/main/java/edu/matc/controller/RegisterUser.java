@@ -36,41 +36,29 @@ public class RegisterUser extends HttpServlet {
 
        String userName = request.getParameter("username");
        String password = request.getParameter("password");
-       String passwordConfirm = request.getParameter("passwordConfirm");
 
-//       if (password.equals(passwordConfirm)) {
+       newUser.setUserName(userName);
+       newUser.setUserPassword(password);
 
-//       MessageDigestCredentialHandler credentialHandler = new MessageDigestCredentialHandler();
-//       try {
-//           credentialHandler.setAlgorithm("sha-256");
-//       } catch (NoSuchAlgorithmException e) { logger.error(e ); }
-//       credentialHandler.setEncoding("UTF-8");
-//       String hashedPassword = credentialHandler.mutate(password);
-//       logger.info(hashedPassword);
+       int recordInserted = genericDao.insert(newUser);
 
-           newUser.setUserName(userName);
-           newUser.setUserPassword(password);
+       Role newRole = new Role();
 
-           int recordInserted = genericDao.insert(newUser);
+       newRole.setUserName(newUser.getUserName());
+       newRole.setUserRole("user");
+       newRole.setUserId(newUser.getId());
 
-           Role newRole = new Role();
+       int recordInsertedRole = genericDaoRole.insert(newRole);
 
-           newRole.setUserName(newUser.getUserName());
-           newRole.setUserRole("user");
-           newRole.setUserId(newUser.getId());
-
-           int recordInsertedRole = genericDaoRole.insert(newRole);
-
-           if (recordInserted > 0 && recordInsertedRole > 0) {
-               addMessage = "success";
-               // success
-           } else {
-               addMessage = "failure";
-               // failure
-           }
-           session.setAttribute("userAddMessage", addMessage);
-           response.sendRedirect("userAdd"); //
-
+       if (recordInserted > 0 && recordInsertedRole > 0) {
+           addMessage = "success";
+           // success
+       } else {
+           addMessage = "failure";
+           // failure
+       }
+       session.setAttribute("userAddMessage", addMessage);
+       response.sendRedirect("userAdd");
 
    }
 

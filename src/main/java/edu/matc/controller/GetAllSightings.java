@@ -13,11 +13,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Get all sightings servlet
+ * @author emullendore
+ */
 @WebServlet ("/Sightings")
 
 public class GetAllSightings extends HttpServlet {
-    final Logger logger = LogManager.getLogger(this.getClass());
 
+    final Logger logger = LogManager.getLogger(this.getClass());
+    /**
+     * Retrieves all sightings from db
+     */
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         GenericDao<Sighting> dao = new GenericDao<>(Sighting.class);

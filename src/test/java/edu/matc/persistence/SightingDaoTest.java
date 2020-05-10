@@ -53,6 +53,7 @@ class SightingDaoTest {
 
     /**
      * Verify successful insert of a user
+     * @throws ParseException if error in parsing date
      */
     @Test
     void insertSuccess() throws ParseException {

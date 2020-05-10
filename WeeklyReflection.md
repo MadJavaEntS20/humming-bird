@@ -122,6 +122,14 @@ Did most TODOs listed above, that includes adding tooltips, showing temporal dat
  Long list of todos to complete this weekend: 
 validate registration page (password requriements?), improve validation in addSighting page, ability to update password, a the user page would have this button to do so, refactor deleteSighting to re-use code between user and searchUser page, in the map, add a legend, step through buttons, add an about section and some hint this site is about birds (!!!). CSS tweaks including the weird footer and tooltips on the userpage map, and also some "Extra credit feature"..................
 
-
+ ### Week 15
+ 5/5/20 - 10 hours
+ 
+ More progess. Sightings form is now fully validated to require input
+ from at least one field and to give a warning if input for address input 
+ is bad/out of range
+ Step through feature on map to see sightings day by day
+ Weird footer fixed.
+ Delete sighting refactored
 
 

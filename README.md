@@ -16,7 +16,7 @@ collective sightings will be created to illustrate the journey of the hummingbir
 * Security/Authentication
   * Tomcat's JDBC Realm Authentication
   * Admin role: create/read/update/delete (crud) of all data
-  * User role: create observations of hummingbirds
+  * User role: create observations of hummingbirds, delete own sightings
   * All: anyone can view migration map (no login)
 * Database
   * MySQL
@@ -33,17 +33,12 @@ collective sightings will be created to illustrate the journey of the hummingbir
   * BootStrap 4
 * Data Validation
   * Bootstrap Validator for front end
-  * Explore Hibernate's validation
 * Logging
   * Configurable logging using Log4J2. In production, only errors will normally be logged, but logging at a debug level can be turned on to facilitate trouble-shooting. 
 * Hosting
   * AWS
 * Independent Research Topic/s
-  * CI tools in AWS
-  * Materialize
-  * Hibernate Validation
-  * Hibernate Search
-* Project Lombok to eliminate boilerplate code like getters/setters/equals
+  * OpenLayers Mapping Library for generating dynamic maps with tooltips and playthrough
 * Unit Testing
   * JUnit tests to achieve 80%+ code coverage 
 * IDE: IntelliJ IDEA

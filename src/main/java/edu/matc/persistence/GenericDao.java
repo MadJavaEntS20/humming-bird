@@ -39,6 +39,8 @@ public class GenericDao<T> {
 
     /**
      * Gets an entity by id
+     * @param id id of entity
+     * @param <T> type of entity
      * @return an entitiy
      */
     public <T>T getById(int id) {
@@ -76,6 +78,7 @@ public class GenericDao<T> {
     /**
      * insert entity
      * @param entity  User to be inserted or updated
+     * @return id will be 1 if successful
      */
     public int insert(T entity) {
         int id = 0;
@@ -88,6 +91,9 @@ public class GenericDao<T> {
     }
 
     /**
+     * @param propertyName name of property
+     * @param value value of property
+     * @return entities with name and property
      * Get user by property (exact match)
      * sample usage: getByPropertyEqual("lastname", "Curry")
      */
@@ -106,6 +112,8 @@ public class GenericDao<T> {
     }
 
     /**
+     * @param propertyName name of property
+     * @param value name of value
      * Get entity by property (like)
      * sample usage: getByPropertyLike("lastname", "C")
      */

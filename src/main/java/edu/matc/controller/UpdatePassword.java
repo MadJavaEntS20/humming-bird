@@ -14,6 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
+/**
+ * Update the password
+ * @author emullendore
+ */
 @WebServlet (
         name = "updatePassword",
         urlPatterns = { "/updatePassword"}

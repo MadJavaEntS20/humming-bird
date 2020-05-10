@@ -51,13 +51,12 @@ public class Regions{
 	}
 
 	@Override
- 	public String toString(){
-		return 
-			"Regions{" + 
-			"aMERICAS = '" + aMERICAS + '\'' + 
-			",nORTHERN_AMERICA = '" + nORTHERNAMERICA + '\'' + 
-			",wORLD = '" + wORLD + '\'' + 
-			",uS = '" + uS + '\'' + 
-			"}";
-		}
+	public String toString() {
+		return "Regions{" +
+				"aMERICAS='" + aMERICAS + '\'' +
+				", nORTHERNAMERICA='" + nORTHERNAMERICA + '\'' +
+				", wORLD='" + wORLD + '\'' +
+				", uS='" + uS + '\'' +
+				'}';
+	}
 }

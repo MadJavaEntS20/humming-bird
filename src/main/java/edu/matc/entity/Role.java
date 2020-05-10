@@ -39,6 +39,13 @@ public class Role {
      */
     public Role() { }
 
+    /**
+     * Instantiates a new Role.
+     *
+     * @param userName the user name
+     * @param userRole the user role
+     * @param userId   the user id
+     */
     /*
      * Instantiates a new Role.
      *
@@ -50,22 +57,48 @@ public class Role {
         this.userRole = userRole;
         this.userId = userId;
     }
+
+    /**
+     * Gets user.
+     *
+     * @return the user
+     */
     public User getUser() {
         return user;
     }
 
+    /**
+     * Sets user.
+     *
+     * @param user the user
+     */
     public void setUser(User user) {
         this.user = user;
     }
 
+    /**
+     * Gets user id.
+     *
+     * @return the user id
+     */
     public int getUserId() {
         return userId;
     }
 
+    /**
+     * Sets user id.
+     *
+     * @param userId the user id
+     */
     public void setUserId(int userId) {
         this.userId = userId;
     }
 
+    /**
+     * Gets user name.
+     *
+     * @return the user name
+     */
     public String getUserName() {
         return userName;
     }

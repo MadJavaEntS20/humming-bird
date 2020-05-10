@@ -1,5 +1,4 @@
 let iconFeatureArray = [];
-console.log(sightingsObject);
 
 sightingsObject.forEach(obj => {
     let iconFeature = new ol.Feature({
@@ -189,7 +188,6 @@ function setTime() {
 function setTimeBackward() {
     let date = new Date(startDate).setDate(new Date(startDate).getDate() - 1);
     let newDate = new Date(date);
-    console.log(newDate)
     if (newDate < new Date().setMonth(new Date().getMonth())) {
         stop();
     }
@@ -217,17 +215,18 @@ let reset = () => {
     iconFeatureArray.forEach(feature => {
         updateFeatureStyle(feature);
     });
-}
+    document.getElementById('time').innerHTML = '';
+};
 
 let stepForward = () => {
     stop();
     setTime();
-}
+};
 
 let stepBack = () => {
     stop();
     setTimeBackward();
-}
+};
 
 
 let startButton = document.getElementById('play');

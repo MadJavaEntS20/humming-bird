@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * Register servlet to forward from RegisterUser to Sightings page
+ * @author emullendore
+ */
 @WebServlet (
     name = "userAdd",
         urlPatterns = { "/userAdd" }

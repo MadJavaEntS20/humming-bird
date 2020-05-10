@@ -2,12 +2,14 @@ package edu.matc.controller;
 
 import edu.matc.entity.Sighting;
 import edu.matc.entity.User;
+import edu.matc.opencagedata.OpenCageResponse;
 import edu.matc.opencagedata.ResultsItem;
 import edu.matc.persistence.GenericDao;
 import edu.matc.persistence.OpenCageDao;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,14 +22,22 @@ import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.util.Date;
 
+/**
+ * AddSighting servlet to take in addSighting.jsp form input, validate, and insert into db
+ *  @author emullendore
+ */
 @WebServlet (
         name = "inputSighting",
         urlPatterns = ( "/inputSighting")
 )
-public class AddSighting extends HttpServlet {
-    private final Logger logger = LogManager.getLogger(this.getClass());
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+public class AddSighting extends HttpServlet {
+    /**
+     * The Logger.
+     */
+    public final Logger logger = LogManager.getLogger(this.getClass());
+
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         HttpSession session = request.getSession();
         GenericDao<Sighting> dao = new GenericDao<>(Sighting.class);
         GenericDao<User> daoUser =  new GenericDao<>(User.class);
@@ -36,32 +46,48 @@ public class AddSighting extends HttpServlet {
         if (request.getRemoteUser() != null) {
             newUser = daoUser.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
         }
-        if (newUser == null) {
-
-        }
+        String statusMessage;
 
         float longitude = getCoords(request)[0];
         float latitude = getCoords(request)[1];
-        String species = request.getParameter("species");
-        Date date = getDate(request);
 
-        Sighting newSighting = new Sighting(newUser, longitude, latitude, species, date, true);
-        logger.info("new Sighting to be added: " + newSighting);
+        if (longitude == 0f && latitude == 0f) {
+//            logger.info("lat and long are 0");
+            statusMessage = "Invalid location input, please try again";
+            session.setAttribute("statusMessage", statusMessage);
+            request.getRequestDispatcher("/addSighting.jsp").forward(request, response);
+        } else if ( longitude > -108 && longitude < -73 && latitude < 55 && latitude > 20) {
 
-        int recordInserted = dao.insert(newSighting);
+            String species = request.getParameter("species");
+            Date date = getDate(request);
+            Sighting newSighting = new Sighting(newUser, longitude, latitude, species, date, true);
+            logger.info("new Sighting to be added: " + newSighting);
 
-        String addMessage;
+            int recordInserted = dao.insert(newSighting);
 
-        if (recordInserted > 0) {
-            addMessage = "Sighting Added Successfully!";
+            String addMessage;
+
+            if (recordInserted > 0) {
+                addMessage = "Sighting Added Successfully!";
+            } else {
+                addMessage = "Error in Adding Sighting";
+            }
+            session.setAttribute("userAddMessage", addMessage);
+            response.sendRedirect("sightingAdd");
         } else {
-            addMessage = "Error in Adding Sighting";
+            statusMessage = "Input is out of valid range for hummingbirds";
+            session.setAttribute("statusMessage", statusMessage);
+            request.getRequestDispatcher("/addSighting.jsp").forward(request, response);
         }
-        session.setAttribute("userAddMessage", addMessage);
 
-        response.sendRedirect("sightingAdd");
     }
 
+    /**
+     * Gets date.
+     *
+     * @param request the request
+     * @return the date
+     */
     public static Date getDate(HttpServletRequest request) {
         String dateTimeParameter = request.getParameter("dateTime");
         // make sure the seconds are set before parsing
@@ -71,6 +97,13 @@ public class AddSighting extends HttpServlet {
         return Timestamp.valueOf(dateTimeParameter.replace("T"," "));
     }
 
+    /**
+     * Get coords float [ ].
+     *
+     * @param request the request
+     * @return the float [ ]
+     * @throws UnsupportedEncodingException the unsupported encoding exception
+     */
     public static float[] getCoords(HttpServletRequest request) throws UnsupportedEncodingException {
         float latitude = 0;
         float longitude = 0;
@@ -81,21 +114,21 @@ public class AddSighting extends HttpServlet {
 
         if (longitudeParameter != null && longitudeParameter.length() > 1 && latitudeParameter != null && latitudeParameter.length() > 1) {
             // if defined, add these to sightings object, else will need to geocode
-            latitude = Float.parseFloat(request.getParameter("latitude"));
-            longitude = Float.parseFloat(request.getParameter("longitude"));
+            latitude = Float.parseFloat(latitudeParameter);
+            longitude = Float.parseFloat(longitudeParameter);
 
         } else if (locationParameter != null) {
             // OpenCage API to get lat and long from passed location string
             OpenCageDao openCageDao = new OpenCageDao();
-
-            for (ResultsItem item : openCageDao
-                    .getResponseDataWithParam(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()))
-                    .getResults())
-            {
-                latitude = (float) item.getGeometry().getLat();
-                longitude = (float) item.getGeometry().getLng();
-//                logger.info(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()));
-//                logger.info(latitude + ", " + longitude);
+            OpenCageResponse item = openCageDao.getResponseDataWithParam(URLEncoder.encode(locationParameter, StandardCharsets.UTF_8.toString()));
+            if (item != null) {
+                for (ResultsItem result : item.getResults()) {
+                    latitude = (float) result.getGeometry().getLat();
+                    longitude = (float) result.getGeometry().getLng();
+                }
+            } else {
+                latitude = 0f;
+                longitude = 0f;
             }
         }
         return new float[]{longitude, latitude};

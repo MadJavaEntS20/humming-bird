@@ -9,17 +9,21 @@
             <c:choose>
                 <c:when test ="${sightingToUpdate ne null}">
                     <p class="h4 my-4 text-center">Update Sighting</p>
-                    <form id="addSightingForm" action="${pageContext.request.contextPath}/updateSighting" class="needs-validation my-4" method="post" novalidate>
+                    <form id="addSightingForm" action="${pageContext.request.contextPath}/updateSighting" class="needs-validation my-4" method="post"  onsubmit="return validateLocation()" novalidate>
                         <input type="hidden" name="id" value="${sightingToUpdate.id}">
                 </c:when>
                 <c:otherwise>
-                    <form id="addSightingForm" action="${pageContext.request.contextPath}/inputSighting" class="needs-validation my-4" method="post" novalidate>
+                    <form id="addSightingForm" action="${pageContext.request.contextPath}/inputSighting" class="needs-validation my-4" method="post" onsubmit="return validateLocation()" novalidate>
                         <p class="h4 my-4 text-center">Add Sighting</p>
                 </c:otherwise>
             </c:choose>
                 <div class="form-group locationInputOptions">
                     <label for="locationInput" class="h6">Location</label>
-                    <i class="active d-block my-2">
+                    <p class = "location-tooltip invalid-tooltip"></p>
+                    <p  class="bg-danger text-white">${statusMessage}</p>
+                    <c:remove var="statusMessage"/>
+
+                    <p class="active d-block my-2">
                         Get
                         <button type="button" id="location-current" class="location-options btn btn-success my-2 px-1">
                             <svg class="bi bi-cursor-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -28,15 +32,17 @@
                             Current Location
                         </button>
                         or
-                        <span class="location-options btn btn-success" id="location-manual">Enter Location</span></i>
+                        <span class="location-options btn btn-success" id="location-manual">Enter Location</span>
+                    </p>
                     <div class="row location-inputs">
                         <div class="col flex mr-2 location-current">
                             <span class="d-block mx-1" id="status"></span>
                             <input type="text" value="${sightingToUpdate ne null ? sightingToUpdate.latitude : ''}" id="locationLatitude"  class="form-control my-2 mx-1" placeholder="latitude" name="latitude">
                             <input type="text" value="${sightingToUpdate ne null ? sightingToUpdate.longitude : ''}" id="locationLongitude" class="form-control my-2 mx-1" placeholder="longitude" name="longitude">
+
                         </div>
                         <div class="col align-self-center location-manual">
-                            <input type="text" class="form-control my-1 ml-1" id="locationInput" name="location" placeholder="Enter location manually">
+                            <input type="text" class="form-control my-1 ml-1" id="locationInput" name="location" placeholder="Enter location manually" >
                         </div>
                     </div>
                 </div>
