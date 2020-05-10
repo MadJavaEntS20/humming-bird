@@ -12,8 +12,8 @@ import java.io.IOException;
  * @author emullendore
  */
 @WebServlet (
-        name = "sightingAdd",
-            urlPatterns = { "/sightingAdd" }
+        name = "inputSightingServlet",
+            urlPatterns = { "/inputSightingServlet" }
         )
 
 public class AddSightingServlet extends HttpServlet {

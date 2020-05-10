@@ -41,6 +41,17 @@
                     </c:forEach>
                 </tbody>
             </table>
+            <div class="legend d-flex">
+                <ul>
+                    <li><img src="Images/pink.PNG" alt="ruby throated legend key">Ruby Throated</li>
+                    <li><img src="Images/yellow.PNG" alt="rufous legend key">Rufous</li>
+                </ul>
+                <ul>
+                    <li><img src="Images/green.PNG" alt="green-violetear legend key">Green-Violetear</li>
+                    <li><img src="Images/blue.PNG" alt="broad-billed legend key">Broad-Billed</li>
+
+                </ul>
+            </div>
             <div id="userMap" class="userMap"></div>
             <span id="info"></span>
 

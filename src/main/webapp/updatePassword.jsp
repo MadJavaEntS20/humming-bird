@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ekmul
-  Date: 5/3/2020
-  Time: 3:31 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@include file="head.jsp"%>
 <html>
 <body>

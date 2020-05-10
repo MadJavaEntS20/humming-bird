@@ -20,7 +20,7 @@
                 <div class="form-group locationInputOptions">
                     <label for="locationInput" class="h6">Location</label>
                     <p class = "location-tooltip invalid-tooltip"></p>
-                    <p  class="bg-danger text-white">${statusMessage}</p>
+                    <p  class="pl-2 bg-danger text-white">${statusMessage}</p>
                     <c:remove var="statusMessage"/>
 
                     <p class="active d-block my-2">

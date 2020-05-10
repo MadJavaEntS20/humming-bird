@@ -7,10 +7,20 @@
 <!-- Page Content -->
 <div class="container">
     <div class="row">
-        <div class="col-lg-12 text-center">
-            <h3>${userAddMessage}</h3>
+        <div class="col-lg-12 text-center" style="height: 19.45em;">
+            <h3 class="my-4">${userAddMessage}</h3>
             <c:remove var="userAddMessage"/>
             <a class="btn btn-primary" href="addSighting.jsp">Add Sighting</a>
+            <div class="legend d-flex">
+                <ul>
+                    <li><img src="Images/pink.PNG" alt="ruby throated legend key">Ruby Throated</li>
+                    <li><img src="Images/yellow.PNG" alt="rufous legend key">Rufous</li>
+                </ul>
+                <ul>
+                    <li><img src="Images/green.PNG" alt="green-violetear legend key">Green-Violetear</li>
+                    <li><img src="Images/blue.PNG" alt="broad-billed legend key">Broad-Billed</li>
+                </ul>
+            </div>
             <div class="map" id="map"></div>
             <span id="info"></span>
             <div class="time-buttons">

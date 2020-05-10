@@ -1,16 +1,55 @@
+.map, .userMap {
+    height: 400px;
+    width: 100%;
+    margin: -4em .5em .5em;
+}
+
+#info {
+    position: absolute;
+    height: 1px;
+    width: 10px;
+    z-index: 100;
+}
+.tooltip.in {
+    opacity: 1;
+}
+.tooltip.top .tooltip-arrow {
+    border-top-color: white;
+}
+.tooltip-inner {
+    border: 2px solid white;
+    white-space:pre-line;
+    max-width: none;
+    text-align: left;
+}
+
+table td {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+form {
+    margin-top: 9%;
+}
+
+.divider {
+    border:  .02em solid #6c757d !important
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #343a40 !important;
+    /* position: absolute; */
+    color: white;
+    width: 100%;
+    bottom: 0;
+}
+
 .navbar {
     font-weight: normal;
 }
 
-.main-container {
-    min-height: calc(100vh - 70px);
-}
-
-.map, .userMap {
-    height: 400px;
-    width: 100%;
-    margin: .5em;
-}
 
 #info {
     position: absolute;
@@ -48,7 +87,7 @@ footer {
     background-color: #343a40 !important;
     color: white;
     display: block;
-    margin-top: 10em;
+    margin-top: 25em;
 }
 
 .location-options {
@@ -68,4 +107,30 @@ footer {
     display: flex;
     flex-flow: column;
 }
+
+.legend {
+    background: white;
+    border: 1px #343a40 solid;
+    padding: 6px;
+    width: 23em;
+    position: relative;
+    z-index: 1000;
+    top: 328px;
+    left: 16px;
+}
+
+.legend > ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    align-items: first baseline;
+    padding-left: 1.5em;
+    margin-bottom: 0;
+}
+
+img {
+    height: 2em;
+    margin-right: .5em;
+}
+
 

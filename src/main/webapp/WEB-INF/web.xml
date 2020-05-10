@@ -31,16 +31,30 @@
     </form-login-config>
   </login-config>
 
-
-
   <!-- Protect the user search page. -->
   <security-constraint>
     <web-resource-collection>
-      <web-resource-name>search</web-resource-name>
+      <web-resource-name>Admin</web-resource-name>
       <url-pattern>/searchUser.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>UserAndAdmin</web-resource-name>
+      <url-pattern>/addSighting.jsp</url-pattern>
+      <url-pattern>/userPage.jsp</url-pattern>
+      <url-pattern>/inputSighting</url-pattern>
+      <url-pattern>/sightingAdd</url-pattern>
+      <url-pattern>/removeSighting</url-pattern>
+      <url-pattern>/updatePassword</url-pattern>
+      <url-pattern>/updateSighting</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
     </auth-constraint>
   </security-constraint>
 
@@ -55,33 +69,11 @@
     </auth-constraint>
   </security-constraint>
 
-  <security-constraint>
-    <web-resource-collection>
-      <web-resource-name>admin</web-resource-name>
-      <url-pattern>/addSighting.jsp</url-pattern>
-    </web-resource-collection>
-    <auth-constraint>
-      <role-name>user</role-name>
-    </auth-constraint>
-  </security-constraint>
-
-  <security-constraint>
-    <web-resource-collection>
-      <web-resource-name>admin</web-resource-name>
-      <url-pattern>/userPage.jsp</url-pattern>
-    </web-resource-collection>
-    <auth-constraint>
-      <role-name>user</role-name>
-    </auth-constraint>
-  </security-constraint>
-
-
   <security-role>
     <role-name>admin</role-name>
   </security-role>
   <security-role>
     <role-name>user</role-name>
   </security-role>
-
 
 </web-app>

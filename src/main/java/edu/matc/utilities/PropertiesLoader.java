@@ -2,7 +2,9 @@
 package edu.matc.utilities;
 
 
-import java.io.IOException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Properties;
 
 
@@ -23,14 +25,12 @@ public interface PropertiesLoader{
      */
     default Properties loadProperties(String propertiesFilePath){
         Properties properties = new Properties();
+        final Logger logger = LogManager.getLogger(this.getClass());
+
         try {
             properties.load(this.getClass().getResourceAsStream(propertiesFilePath));
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
-            System.out.println("IO Exception");
-        } catch (Exception exception) {
-            exception.printStackTrace();
-            System.out.println("Something went wrong");
+        } catch (Exception ioException) {
+            logger.error(ioException);
         }
         return properties;
     }

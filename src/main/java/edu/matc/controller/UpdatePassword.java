@@ -29,13 +29,11 @@ public class UpdatePassword extends HttpServlet {
     private GenericDao<User> dao = new GenericDao<>(User.class);
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        int idOfUser = Integer.parseInt(request.getParameter("id"));
         User userToUpdatePassword = dao.getByPropertyEqual("userName", request.getRemoteUser()).get(0);
         request.setAttribute("userUpdate", userToUpdatePassword);
         logger.info("userToUpdatePassword" + userToUpdatePassword);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/updatePassword.jsp");
         dispatcher.forward(request,response);
-
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {

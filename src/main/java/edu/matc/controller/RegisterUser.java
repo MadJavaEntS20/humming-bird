@@ -51,10 +51,10 @@ public class RegisterUser extends HttpServlet {
        int recordInsertedRole = genericDaoRole.insert(newRole);
 
        if (recordInserted > 0 && recordInsertedRole > 0) {
-           addMessage = "success";
+           addMessage = "Registered Successfully!";
            // success
        } else {
-           addMessage = "failure";
+           addMessage = "Error in Registration";
            // failure
        }
        session.setAttribute("userAddMessage", addMessage);

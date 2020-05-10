@@ -13,7 +13,7 @@ function geoFindMe() {
         locationInputElementLongitude.value = `${longitude}`;
     }
 
-    function error() {
+    function error(err) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
         status.textContent = 'Unable to retrieve your location';
     }

@@ -62,7 +62,6 @@ public class OpenCageDao implements PropertiesLoader {
             openCageResponse = null;
             logger.error("JsonProcessingException");
             logger.error(e);
-            e.printStackTrace();
         }
         logger.info("openCageResponse " + openCageResponse);
         return openCageResponse;

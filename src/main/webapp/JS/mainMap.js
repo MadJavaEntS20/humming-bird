@@ -126,7 +126,7 @@ function formatDate(date) {
 let startDate = sixMonthsAgo();
 const frameRate = 0.5;
 let animationId = null;
-console.log(startDate);
+
 function sixMonthsAgo() {
     let sixMos = new Date();
     sixMos.setMonth(sixMos.getMonth() - 2);

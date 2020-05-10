@@ -51,13 +51,12 @@ public class AddSighting extends HttpServlet {
         float longitude = getCoords(request)[0];
         float latitude = getCoords(request)[1];
 
-        if (longitude == 0f && latitude == 0f) {
+        if (longitude == 0 && latitude == 0) {
 //            logger.info("lat and long are 0");
             statusMessage = "Invalid location input, please try again";
             session.setAttribute("statusMessage", statusMessage);
             request.getRequestDispatcher("/addSighting.jsp").forward(request, response);
         } else if ( longitude > -108 && longitude < -73 && latitude < 55 && latitude > 20) {
-
             String species = request.getParameter("species");
             Date date = getDate(request);
             Sighting newSighting = new Sighting(newUser, longitude, latitude, species, date, true);
@@ -73,7 +72,7 @@ public class AddSighting extends HttpServlet {
                 addMessage = "Error in Adding Sighting";
             }
             session.setAttribute("userAddMessage", addMessage);
-            response.sendRedirect("sightingAdd");
+            response.sendRedirect("inputSightingServlet");
         } else {
             statusMessage = "Input is out of valid range for hummingbirds";
             session.setAttribute("statusMessage", statusMessage);
@@ -126,9 +125,6 @@ public class AddSighting extends HttpServlet {
                     latitude = (float) result.getGeometry().getLat();
                     longitude = (float) result.getGeometry().getLng();
                 }
-            } else {
-                latitude = 0f;
-                longitude = 0f;
             }
         }
         return new float[]{longitude, latitude};

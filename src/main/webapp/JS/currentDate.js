@@ -11,10 +11,13 @@ let localDatetime = year + "-" +
     (hour < 10 ? "0" + hour.toString() : hour) + ":" +
     (minute < 10 ? "0" + minute.toString() : minute);
     let datetimeField = document.getElementById("dateTime");
+    // console.log(1, datetimeField.value);
     datetimeField.value = datetimeField.value === '' ? localDatetime:
         `${datetimeField.value.slice(0,10)}T${datetimeField.value
             .slice(10, datetimeField.value.length -1)
             .replace(/ /g, '').slice(0, 5)}`;
+    // console.log(2, datetimeField.value);
+
 });
 
 

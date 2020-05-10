@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col-lg-12 text-center">
             <h1 class="mt-5 text-danger">Login failed</h1>
+            <h4 class="mt-5"><a href="loginAction">Try Again</a></h4>
         </div>
     </div>
 </div>
