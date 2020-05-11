@@ -1,4 +1,5 @@
 <%@include file="head.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 <body>
 <%@include file="navigation.jsp"%>
@@ -13,7 +14,7 @@
                         <input type="hidden" name="id" value="${sightingToUpdate.id}">
                 </c:when>
                 <c:otherwise>
-                    <form id="addSightingForm" action="${pageContext.request.contextPath}/inputSighting" class="needs-validation my-4" method="post" onsubmit="return validateLocation()" novalidate>
+                    <form id="addSightingForm" action="${pageContext.request.contextPath}/createSighting" class="needs-validation my-4" method="post" onsubmit="return validateLocation()" novalidate>
                         <p class="h4 my-4 text-center">Add Sighting</p>
                 </c:otherwise>
             </c:choose>
@@ -48,7 +49,7 @@
                 </div>
                 <div class="form-group">
                     <label for="dateTime" class="h6">Time</label>
-                    <input type="datetime-local" value="${sightingToUpdate ne null ? sightingToUpdate.dateTime : ''}" class="form-control w-75" id="dateTime" name="dateTime" placeholder="Enter Date and Time" required>
+                    <input type="date" value="${sightingToUpdate ne null ? fn:substring(sightingToUpdate.dateTime, 0, 10) : ''}" class="form-control w-75" id="dateTime" name="dateTime" placeholder="Enter Date and Time" required>
                     <div class="invalid-tooltip">Please set a date of sighting.</div>
                 </div>
                 <div class="form-group">

@@ -2,6 +2,7 @@ package edu.matc.controller;
 
 import edu.matc.entity.Sighting;
 import edu.matc.persistence.GenericDao;
+import lombok.SneakyThrows;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,8 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 
-import static edu.matc.controller.AddSighting.getCoords;
-import static edu.matc.controller.AddSighting.getDate;
+import static edu.matc.controller.createSighting.formatDate;
+import static edu.matc.controller.createSighting.formatCoords;
 
 /**
  * UpdateSighting servlet that will redirect to either the searchUser or singleUser page
@@ -49,16 +50,16 @@ public class UpdateSighting extends HttpServlet {
         dispatcher.forward(request,response);
     }
 
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    @SneakyThrows
+    public void doPost(HttpServletRequest request, HttpServletResponse response) {
 
         int id = Integer.parseInt(request.getParameter("id"));
         Sighting updatedSighting = sightingDao.getById(id);
-        Date date = getDate(request);
-
+        Date date = formatDate(request);
         updatedSighting.setDateTime(date);
 
-        float longitude = getCoords(request)[0];
-        float latitude = getCoords(request)[1];
+        float longitude = formatCoords(request)[0];
+        float latitude = formatCoords(request)[1];
 
         updatedSighting.setLatitude(latitude);
         updatedSighting.setLongitude(longitude);

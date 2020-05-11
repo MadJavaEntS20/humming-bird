@@ -59,7 +59,7 @@ class SightingDaoTest {
     void insertSuccess() throws ParseException {
         User newUser = new User("gmullendore", "password3");
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        Date javaDate = sdf.parse("06/10/2019 18:29:09");
+        Date javaDate = sdf.parse("06/10/2019 00:00:00");
         int idNewUserInsert = genericDaoUser.insert(newUser);
         assertNotEquals(0, idNewUserInsert);
 

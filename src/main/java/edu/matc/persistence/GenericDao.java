@@ -114,7 +114,7 @@ public class GenericDao<T> {
     /**
      * @param propertyName name of property
      * @param value name of value
-     * Get entity by property (like)
+     * @return Get entity by property (like)
      * sample usage: getByPropertyLike("lastname", "C")
      */
     public List<T> getByPropertyLike(String propertyName, String value) {
