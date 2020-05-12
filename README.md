@@ -1,4 +1,6 @@
-# Katya Mullendore Individual Project: Hummingbird Tracker
+# Fluttr, A Hummingbird Tracker
+
+[Video Demo](FinalPresentationMaterials/demo.zip)
 
 
 ### Problem Statement
