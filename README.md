@@ -1,6 +1,6 @@
 # Fluttr, A Hummingbird Tracker
 
-[Video Demo](FinalPresentationMaterials/demo.zip)
+[Video Demo](https://youtu.be/3VesMdvBfiM)
 
 
 ### Problem Statement
